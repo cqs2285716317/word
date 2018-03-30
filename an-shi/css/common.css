@@ -1,0 +1,412 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body{
+	min-width: 1220px;
+	font-family:"Microsoft Yahei", "微软雅黑",Arial;
+}
+
+a{
+	text-decoration: none !important;
+	color:#333;
+	outline: none;
+}
+
+.container{
+	margin-left:auto;
+	margin-right:auto;
+	padding: 0 10px;
+	width:1200px;
+}
+
+.fl{
+	float:left;
+}
+
+.fr{
+	float:right;
+}
+
+.hide{
+	display: none;
+}
+
+.show{
+	display: block;
+}
+
+.checkbox.on{
+	background-position: -5px -30px;
+}
+
+
+/* 公共样式 */
+.head{
+	z-index: 99;
+	position: relative;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.top{
+	height: 100px;
+	background-color:#FFF;
+}
+
+.logo{
+	margin-top:30px;
+}
+
+.nav{
+	margin-top: 34px;
+    margin-left: 80px;
+    height: 40px;
+    letter-spacing: 1px;
+}
+
+.nav ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.nav li{
+	float:left;
+	text-align: center;
+	position: relative;
+}
+
+.nav a{
+	display: block;
+	height: 38px;
+	line-height: 38px;
+	border-bottom:2px solid #FFF;
+	font-size:16px;
+    margin: 0px 25px;	
+}
+.nav .active .twonav{
+	display: block;
+}
+
+.twonav{
+	background-color: #fff;
+	display:none;
+	margin-top: 30px;
+	padding-bottom: 6px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99999999;
+	padding-top: 20px;
+}
+
+.twonav a{
+	padding: 0px;
+	border-bottom: 1px dashed #e0e0e0;
+    height: 45px;
+    line-height: 45px;
+	margin: 0px 25px;
+}
+.twonav a:last-child{
+border-bottom: 0px;
+	line-height: 25px;
+	height: auto;
+	padding-top: 5px;
+	/*padding: 5px 0 10px 0;*/
+}
+.twonav:hover {
+	display: block;
+}
+.nav a:hover{
+	color:#2186dc;
+}
+
+.nav li.on>a{
+	color:#2186dc;
+	border-color:#2186dc;
+}
+
+.top-r{
+	margin-top:32px;
+	height: 40px;
+	line-height: 40px;
+	font-size:14px;
+	color:#999;
+}
+
+.top-r a:hover{
+	color:#2186dc;
+}
+
+.foot-contact{
+	padding: 40px 0 49px;
+	text-align: center;
+	font-size: 26px;
+}
+
+.foot-contact.gray{
+	border-top:1px solid #c1d1df;
+	border-bottom:1px solid #FFF;
+	background-color:#eef2f5;
+}
+
+.foot-contact p{
+	margin: 0 0 19px 0;
+}
+
+.foot-contact .tel{
+	display: inline-block;
+	padding-left:40px;
+	height: 32px;
+	line-height: 32px;
+	color:#2186dc;
+	background:url(../img/icon-foot-tel.png) no-repeat 0 50%;
+	font-size: 24px;
+}
+
+.foot{
+	padding: 8px 0 9px;
+	min-height: 28px;
+	background-color:#eeeeee;
+	border-top: 1px solid #e0e0e0;
+}
+
+.foot-links ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	height: 28px;
+}
+
+.foot-links li{
+	float:left;
+	height: 28px;
+	line-height: 28px;
+	margin-right:50px;
+}
+
+.foot-links a{
+	font-size:12px;
+}
+
+.foot-links a:hover{
+	color:#2186dc;
+}
+
+.foot-focus{
+	font-size:12px;
+	line-height: 28px;
+}
+
+.social-wechat,.social-weibo{
+	display: inline-block;
+	margin-left: 10px;
+	width: 28px;
+	height: 28px;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+
+.social-wechat{
+	background-image:url(../img/icon-foot-wechat.png);
+}
+
+.social-weibo{
+	background-image:url(../img/icon-foot-weibo.png);
+}
+.social-wechat:hover,.social-weibo:hover{
+	background-position:0 -28px;
+}
+
+.focus-wechatImg {
+    display:none;
+	position: absolute;
+	margin-top:-130px;
+	right: 120px;
+	padding:8px;
+	border:1px solid #2186dc;
+	border-radius: 5px;
+	background-color:#FFF;
+}
+
+.social-wechat:hover img{
+	display: inline;
+}
+
+
+
+.btn-login,.btn-register{
+	display: inline-block;
+	margin:0 13px;
+	width: 142px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size:16px;
+	letter-spacing: 5px;
+	border-radius: 7px;
+}
+
+.btn-login:hover{
+	color:#FFF;
+	background-position:0 -40px;
+	
+}
+
+.btn-register{
+	background-color:#ff6c00;
+	color:#FFF;
+}
+
+.btn-register:hover{
+	background-color:#d5600c;
+	
+}
+
+.footBar{
+	padding:8px 0;
+	font-size:12px;
+	background-color:#959595;
+}
+
+.footBar p{
+	margin:0;
+	text-align: center;
+	color:#FFF;
+}
+
+.btnChat a{
+	background-position:0 0;
+}
+
+.btnChat a:hover{
+	background-position:0 -60px;
+}
+
+.btnWechat a{
+	background-position:-70px 0;
+}
+
+.btnWechat a:hover{
+	background-position:-70px -60px;
+}
+
+.btnWechat a img{
+	display: none;
+	position: absolute;
+	top:-20px;
+	right: 70px;
+	padding:8px;
+	border:1px solid #2186dc;
+	border-radius: 5px;
+	background-color:#FFF;
+}
+
+.btnWechat a:hover img{
+	display: inline;
+}
+
+.floatBox{
+	z-index: 99999999;
+	position: fixed;
+	right:30px;
+	top:138px;
+	width: 60px;
+}
+
+.floatBox ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.floatBox li{
+	margin:10px 0;
+}
+
+.floatBox a{
+	position: relative;
+	display: block;
+	width: 60px;
+	height: 60px;
+	background-image:url(../img/icon-xuanfu.png);
+	background-repeat: no-repeat;
+}
+
+.btnChat a{
+	background-position:0 0;
+}
+
+.btnChat a:hover{
+	background-position:0 -60px;
+}
+
+.btnWechat a{
+	background-position:-70px 0;
+}
+
+.btnWechat a:hover{
+	background-position:-70px -60px;
+}
+
+.btnWechat a img{
+	display: none;
+	position: absolute;
+	top:-20px;
+	right: 70px;
+	padding:8px;
+	border:1px solid #2186dc;
+	border-radius: 5px;
+	background-color:#FFF;
+}
+
+.btnWechat a:hover img{
+	display: inline;
+}
+
+.btnTel a{
+	background-position:-140px 0;
+}
+
+.btnTel a:hover{
+	background-position:-140px -60px;
+}
+
+.btnTel span{
+	display: none;
+	position: absolute;
+	top: 15px;
+	right:70px;
+	width: 105px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	font-size:16px;
+	color: #2186dc;
+	border:1px solid #2186dc;
+	border-radius: 5px;
+	background-color: #FFF;
+}
+
+.btnTel a:hover span{
+	display: block;
+}
+
+.btnEdit a{
+	background-position:-210px 0;
+}
+
+.btnEdit a:hover{
+	background-position:-210px -60px;
+}
+
+.goTop{
+	display: none;
+}
+
+.goTop a{
+	background-position:-280px 0;
+}
+
+.goTop a:hover{
+	background-position:-280px -60px;
+}

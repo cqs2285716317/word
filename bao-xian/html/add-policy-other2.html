@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>综合保单</title>
+  <link rel="stylesheet" href="../css/common.min.css">
+  <link rel="stylesheet" href="../css/add-policy.min.css">
+  <link rel="stylesheet" href="../css/add-policy-common.min.css">
+</head>
+<body>
+<div id="addPolicy">
+  <header class="bar">
+    <div class="back" onclick="goPageFn('./policy-other.html')">
+      <img src="../img/icon_back.png" alt="返回">
+    </div>
+
+    <div class="title">保单信息</div>
+
+  </header>
+
+  <div class="container">
+
+    <div class="input-list" style="margin-top: 121px;">
+      <div class="item">
+        <span class="input-name">保单类型</span>
+        <div class="select" onclick="selectSheet.selectSheetFn(1)">
+          <span class="option" id="safeSelect">住院医疗</span>
+          <img src="../img/choicelist.png" alt="arrow">
+        </div>
+      </div>
+
+      <div class="item">
+        <span class="input-name">保险公司</span>
+        <div class="input-group"><input type="text" placeholder="请输入"></div>
+      </div>
+
+      <div class="item">
+        <span class="input-name">产品名称</span>
+        <div class="input-group"><input type="text" placeholder="请输入"></div>
+      </div>
+
+      <div class="item">
+        <span class="input-name">保单号</span>
+        <div class="input-group"><input type="text" placeholder="请输入"></div>
+      </div>
+
+      <div class="item">
+        <span class="input-name">保额</span>
+        <div class="input-group"><input type="text" placeholder="请输入"></div>
+      </div>
+
+      <div class="item item-unit">
+        <span class="input-name">保障期限</span>
+        <div class="input-group"><input type="text" placeholder="请输入"></div>
+        <span class="unit">年</span>
+      </div>
+    </div>
+
+    <div class="date-box">
+      <ul>
+        <li class="cell-1">保障期间</li>
+        <li class="cell-2"></li>
+        <li class="cell-3">02-02-2016</li>
+        <li class="cell-4">0时起</li>
+      </ul>
+
+      <ul>
+        <li class="cell-1"></li>
+        <li class="cell-2">至</li>
+        <li class="cell-3">02-02-2016</li>
+        <li class="cell-4">24时止</li>
+      </ul>
+
+      <ul>
+        <li class="cell-1"></li>
+        <li class="cell-2"></li>
+        <li class="cell-3"><img id="check" src="../img/a1.png" alt="radio"></li>
+        <li class="cell-4">到期提醒</li>
+      </ul>
+    </div>
+
+    <div class="policy-pop">
+      <div class="title">被保险人</div>
+      <div class="radio" id="radio">
+        <img src="../img/a2_1.png" alt="radio">本人
+      </div>
+      <div class="radio" id="radioOther">
+        <img src="../img/a2_2.png" alt="radio">其他
+      </div>
+    </div>
+
+    <div class="input-list" id="popMsg">
+
+      <div class="item">
+        <span class="input-name">姓名*</span>
+        <div class="input-group"><input type="text" placeholder="请输入"></div>
+      </div>
+
+      <div class="item">
+        <span class="input-name">性别</span>
+        <div class="input-group"><input type="text" placeholder="请输入"></div>
+      </div>
+
+      <div class="item">
+        <span class="input-name">身份证</span>
+        <div class="input-group"><input type="text" placeholder="请输入"></div>
+      </div>
+
+    </div>
+
+    <div class="input-list" style="margin-top: 21px;">
+      <div class="item item-icon" onclick="uploadPolicy()">
+        <span class="input-name">上传保单</span>
+        <div class="icon"><img src="../img/choicelist.png" alt="arrow"></div>
+      </div>
+    </div>
+
+    <div class="remark">
+      <div class="title">备注</div>
+
+      <div class="content">高新区老成仁路555号领馆国际城2栋1单元206高新区老成仁路555号领馆国际城2栋1单元206高新区老成仁路555号领馆国际城2栋1单元206</div>
+    </div>
+
+    <div class="btn" style="margin-top: 56px;">确定</div>
+
+  </div>
+</div>
+
+<div class="upload" id="uploadPolicy" style="display: none;">
+  <header class="bar">
+    <div class="back" onclick="back()">
+      <img src="../img/icon_back.png" alt="返回">
+    </div>
+
+    <div class="title">保单信息</div>
+
+  </header>
+
+  <div class="container">
+
+    <div class="upload-policy">
+      <div class="title">上传保单</div>
+
+      <div class="content">
+        <input id="policyFile" type="file" onchange="policyUpload()">
+        <img src="../img/add_1.png" alt="icon">
+      </div>
+    </div>
+
+    <div class="upload-policy">
+      <div class="title">已上传</div>
+    </div>
+
+    <div class="content-img" id="policyList">
+      <!--<img src="" alt="icon">
+      <img src="" alt="icon">
+      <img src="" alt="icon">
+      <img src="" alt="icon">-->
+    </div>
+
+    <div class="btn" style="margin-top: 188px;">完成</div>
+
+  </div>
+</div>
+
+<div class="safe-sheet" id="safeSheet">
+  <div class="input-list" style="margin-top: 121px;">
+    <div class="item">
+      <span class="input-name">保单类型</span>
+      <div class="select" onclick="selectSheet.selectSheetFn(1)">
+        <span class="option">住院医疗</span>
+        <img src="../img/choicelist.png" alt="arrow">
+      </div>
+    </div>
+  </div>
+  <div class="sheet-content">
+    <div class="content-title" id="sheetTitle">保单类型</div>
+    <div class="content-info content-active" onclick="selectSheet.selectOption(this)">住院医疗1</div>
+    <div class="content-info" onclick="selectSheet.selectOption(this)">住院医疗2</div>
+    <div class="content-confirm-btn" onclick="selectSheet.confirmFn()">确定</div>
+  </div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/scale.js"></script>
+
+<script>
+  function uploadPolicy() {
+    var addPolicy = document.getElementById('addPolicy');
+    var uploadPolicy = document.getElementById('uploadPolicy');
+    addPolicy.style.display = 'none';
+    uploadPolicy.style.display = 'block';
+  }
+  
+  function back() {
+    var addPolicy = document.getElementById('addPolicy');
+    var uploadPolicy = document.getElementById('uploadPolicy');
+    uploadPolicy.style.display = 'none';
+    addPolicy.style.display = 'block';
+  }
+  
+  function policyUpload() {
+    var file = document.getElementById('policyFile').files[0];
+    var img = document.createElement('img');
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      img.src = e.target.result;
+      document.getElementById('policyList').appendChild(img);
+    };
+    reader.readAsDataURL(file);
+  }
+  
+  $(function () {
+    $('.radio').click(function () {
+      $('.radio').each(function () {
+        $('#'+$(this).attr('id')+' img').attr('src', '../img/a2_1.png');
+      });
+
+      $('#'+$(this).attr('id')+' img').attr('src', '../img/a2_2.png');
+      if ($(this).attr('id') == 'radio') {
+        $('#popMsg').css('display', 'none');
+      } else {
+        $('#popMsg').css('display', 'block');
+      }
+    });
+    
+    $('#check').click(function () {
+      if ($(this).attr('src') == '../img/a1.png') {
+        $(this).attr('src', '../img/a1_2.png');
+      } else {
+        $(this).attr('src', '../img/a1.png');
+      }
+    });
+  });
+
+  var selectSheet = {
+    selectSheetFn: function (id) {
+      if (id == 1) {
+        $('#safeSheet').css('display', 'block');
+      } else {
+        $('#safeSheet').css({'display': 'block', 'padding-top': '90px'});
+        var title = '#sheetTitle',
+                titleLabel = '#SheetLabel';
+
+        $(title).text(' ');
+        $(title).text('证件类型');
+
+        $(titleLabel).css('letter-spacing', '0');
+        $(titleLabel).text(' ');
+        $(titleLabel).text('证件类型');
+
+
+      }
+    },
+    confirmFn: function () {
+      var sex = '#sex';
+      $('#safeSheet').css('display', 'none');
+      $(sex).text(' ');
+      $(sex).text($('#safeSelect').text());
+    },
+    selectOption: function (obj) {
+      $('.content-info').each(function () {
+        $(this).css('background-color', '#fff');
+      });
+      $(obj).css('background-color', '#f7f7f7');
+      var safeSelect = '#safeSelect';
+      $(safeSelect).text(' ');
+      $(safeSelect).text($(obj).text());
+    }
+  };
+</script>
+
+</body>
+</html>

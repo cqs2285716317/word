@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>我的保单</title>
+  <link rel="stylesheet" href="../css/common.min.css">
+  <link rel="stylesheet" href="../css/me-policy.min.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="search">
+    <label class="input-label"><img src="../img/search_grey.png" alt="收索"></label>
+    <div class="input-group"><input type="text" placeholder="搜索订单号、套餐名称、活动主题"></div>
+  </div>
+
+  <div class="btn-add">
+    <img src="../img/add_2.png" alt="添加">新增保单
+  </div>
+
+  <!--<div class="tabs">
+    <ul>
+      <li><a href="" class="on">核保中</a></li>
+      <li><a href="">待付款</a></li>
+      <li><a href="">已付款</a></li>
+      <li><a href="">生效中</a></li>
+      <li><a href="">已失效</a></li>
+    </ul>
+  </div>-->
+  <div class="tabs">
+    <ul>
+      <li><span class="tab on">核保中</span></li>
+      <li><span class="tab">待付款</span></li>
+      <li><span class="tab">已付款</span></li>
+      <li><span class="tab">生效中</span></li>
+      <li><span class="tab">已失效</span></li>
+    </ul>
+  </div>
+
+  <div class="tb-1 me-policy">
+    <div class="category">综合 <img src="../img/label_1.png" alt="按钮"></div>
+    <div class="code">
+      <div class="code-name">保单号:</div>
+      <div class="code-info">21837128747</div>
+    </div>
+    <p class="title">产品名称</p>
+    <ul>
+      <li>人寿保险公司</li>
+      <li class="sign">保障期限：1年</li>
+    </ul>
+    <div class="list">
+      <ul>
+        <li>住院医疗</li>
+        <li>10万元</li>
+      </ul>
+
+      <ul>
+        <li>重疾</li>
+        <li>10万元</li>
+      </ul>
+
+      <ul>
+        <li>意外</li>
+        <li>10万元</li>
+      </ul>
+
+      <ul>
+        <li>身故</li>
+        <li>10万元</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tb-1 me-policy">
+    <div class="category">团体意外险 <img src="../img/label_2.png" alt="按钮"></div>
+    <div class="code">
+      <div class="code-name">保单号:</div>
+      <div class="code-info">21837128747</div>
+    </div>
+    <div class="code">
+      <div class="code-name">订单号:</div>
+      <div class="code-info">21837128747</div>
+    </div>
+    <p class="title">套餐一标题</p>
+    <ul>
+      <li>平安保险公司</li>
+      <li class="msg-info">套餐介绍套餐介绍套餐介绍套餐介绍套餐介绍套餐介绍套餐介绍套餐介绍套餐介绍套餐介绍套餐介绍套餐介绍套餐介绍套餐介绍介绍套餐介绍套餐介绍套餐介绍套餐。</li>
+      <li class="sign">保障期限：1年</li>
+    </ul>
+    <div class="list">
+      <ul>
+        <li>意外身故、残疾</li>
+        <li>10万元</li>
+      </ul>
+
+      <ul>
+        <li>意外医疗</li>
+        <li>10万元</li>
+      </ul>
+
+      <ul>
+        <li>疾病住院医疗</li>
+        <li>10万元</li>
+      </ul>
+
+      <ul>
+        <li>公共交通意外</li>
+        <li>10万元</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<script src="../js/scale.js"></script>
+<script>
+  $(function () {
+    $('.tab').click(function () {
+      $('.tab').each(function () {
+        $(this).removeClass('on');
+      });
+
+      $(this).addClass('on');
+    });
+  });
+</script>
+</body>
+</html>

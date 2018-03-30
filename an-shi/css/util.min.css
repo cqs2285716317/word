@@ -1,0 +1,410 @@
+@font-face {
+  font-family: MicrosoftYaHei-Bold;
+  src: url("../fonts/MicrosoftYaHei.ttf"); }
+
+@font-face {
+  font-family: MicrosoftYaHei;
+  src: url("../fonts/microsoft.ttf"); }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff; }
+
+p {
+  margin: auto; }
+
+a {
+  text-decoration: none; }
+
+textarea {
+  resize: none !important; }
+
+.el-hide {
+  display: none !important; }
+
+.el-show {
+  display: block !important; }
+
+.topic-a:hover .twonav {
+  display: block !important; }
+
+.select-style {
+  background-color: #20b9ff !important;
+  border-radius: 50px !important;
+  color: #fff !important; }
+
+.lg-rg-select {
+  background-color: #e3e3e3 !important;
+  color: #333 !important; }
+
+.bg-l {
+  width: 50%;
+  float: left;
+  background-color: #dbdbdb; }
+
+.bg-r {
+  width: 50%;
+  float: left;
+  background-color: #e6e6e6; }
+
+.bg {
+  background-color: #f9f9f9;
+  position: relative;
+  z-index: 0;
+  box-shadow: inset 0 -1px 0 0 #e3e3e3;
+  border-top: 1px #e3e3e3 solid;
+  border-bottom: 1px #e3e3e3 solid; }
+
+.content {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-left: calc((100% - 1200px)/2);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 -1px 0 0 #e3e3e3;
+  width: 1200px;
+  z-index: 0;
+  overflow: hidden; }
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); }
+  .popup .popup-box {
+    position: relative;
+    z-index: 999999;
+    margin-top: 203px;
+    margin-left: calc((100% - 954px)/2);
+    background: #ffffff;
+    border: 1px solid #979797;
+    border-radius: 4px;
+    width: 952px;
+    height: 528px; }
+    .popup .popup-box .close-icon {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px; }
+    .popup .popup-box .box-ctn {
+      margin-left: auto;
+      margin-right: auto;
+      width: 430px;
+      margin-top: 39px; }
+      .popup .popup-box .box-ctn .table-form {
+        display: table;
+        padding: 0;
+        margin: 12px 0 0 0; }
+        .popup .popup-box .box-ctn .table-form .input-label {
+          display: table-cell;
+          width: 63px;
+          height: 46px;
+          position: relative;
+          line-height: 46px;
+          font-family: MicrosoftYaHei;
+          font-size: 14px;
+          color: #6e7184;
+          letter-spacing: 0;
+          text-align: center; }
+          .popup .popup-box .box-ctn .table-form .input-label p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 46px;
+            line-height: 46px;
+            text-align: center;
+            font-family: MicrosoftYaHei;
+            font-size: 14px;
+            color: #6e7184;
+            letter-spacing: 0; }
+        .popup .popup-box .box-ctn .table-form .input-text {
+          display: table-cell;
+          position: relative;
+          width: 373px;
+          height: 46px; }
+          .popup .popup-box .box-ctn .table-form .input-text input {
+            padding-left: 16px;
+            display: inline-block;
+            min-height: 46px;
+            max-height: 46px;
+            width: 353px;
+            height: 46px;
+            color: #333;
+            font-size: 14px; }
+          .popup .popup-box .box-ctn .table-form .input-text .error-span {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 15px;
+            z-index: 9999;
+            height: 48px;
+            line-height: 48px;
+            font-family: MicrosoftYaHei;
+            font-size: 14px;
+            color: #ff1d43;
+            letter-spacing: 0;
+            text-align: right; }
+          .popup .popup-box .box-ctn .table-form .input-text textarea {
+            display: inline-block;
+            padding-left: 16px;
+            padding-top: 13px;
+            font-size: 14px;
+            width: 354px;
+            color: #333;
+            height: 173px; }
+          .popup .popup-box .box-ctn .table-form .input-text .text-info {
+            display: block;
+            padding-left: 16px;
+            padding-top: 13px;
+            font-family: MicrosoftYaHei;
+            font-size: 12px;
+            color: #c0c0c0;
+            letter-spacing: 0;
+            text-align: left; }
+          .popup .popup-box .box-ctn .table-form .input-text .text-info {
+            display: block;
+            font-family: MicrosoftYaHei;
+            font-size: 12px;
+            color: #c0c0c0;
+            letter-spacing: 0;
+            text-align: left;
+            padding-left: 16px;
+            padding-top: 10px; }
+          .popup .popup-box .box-ctn .table-form .input-text .btn-group {
+            margin-top: 26px;
+            overflow: hidden;
+            height: 34px;
+            width: 100%; }
+            .popup .popup-box .box-ctn .table-form .input-text .btn-group .bnt-submit {
+              background: #20b9ff;
+              border-radius: 4px;
+              width: 140px;
+              height: 32px;
+              line-height: 32px;
+              font-family: MicrosoftYaHei;
+              font-size: 16px;
+              color: #ffffff;
+              letter-spacing: 0;
+              text-align: center;
+              float: left; }
+            .popup .popup-box .box-ctn .table-form .input-text .btn-group .bnt-cancel {
+              border: 1px solid #6e7184;
+              border-radius: 4px;
+              width: 138px;
+              height: 32px;
+              line-height: 32px;
+              font-family: MicrosoftYaHei;
+              font-size: 16px;
+              color: #6e7184;
+              letter-spacing: 0;
+              text-align: center;
+              float: right; }
+      .popup .popup-box .box-ctn .btn-group {
+        margin-top: 26px;
+        overflow: hidden;
+        height: 34px;
+        width: 100%; }
+        .popup .popup-box .box-ctn .btn-group .bnt-submit {
+          background: #20b9ff;
+          border-radius: 4px;
+          width: 100px;
+          height: 32px;
+          line-height: 32px;
+          font-family: MicrosoftYaHei;
+          font-size: 16px;
+          color: #ffffff;
+          letter-spacing: 0;
+          text-align: center;
+          float: left; }
+        .popup .popup-box .box-ctn .btn-group .bnt-cancel {
+          border: 1px solid #6e7184;
+          border-radius: 4px;
+          width: 98px;
+          height: 32px;
+          line-height: 32px;
+          font-family: MicrosoftYaHei;
+          font-size: 16px;
+          color: #6e7184;
+          letter-spacing: 0;
+          text-align: center;
+          float: left;
+          margin-left: 65px; }
+      .popup .popup-box .box-ctn .error-hint .input-label {
+        color: #ff1d43 !important; }
+        .popup .popup-box .box-ctn .error-hint .input-label p {
+          color: #ff1d43 !important; }
+      .popup .popup-box .box-ctn .error-hint .input-text input,
+      .popup .popup-box .box-ctn .error-hint .input-text textarea {
+        border: 1px #ff1d43 solid !important; }
+      .popup .popup-box .box-ctn .error-hint .error-span {
+        display: inline-block !important; }
+
+.popup-1 .popup-box {
+  margin-top: 140px;
+  margin-left: calc((100% - 954px)/2);
+  background: #ffffff;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  width: 952px;
+  height: 610px; }
+  .popup-1 .popup-box .box-ctn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    padding-bottom: 10px;
+    width: 430px; }
+    .popup-1 .popup-box .box-ctn .table-form .input-label {
+      width: 76px;
+      text-align: right;
+      padding-right: 17px; }
+    .popup-1 .popup-box .box-ctn .table-form .input-text input {
+      width: calc(100% - 16px);
+      height: 40px;
+      max-height: 40px;
+      min-height: 40px;
+      border: 0; }
+    .popup-1 .popup-box .box-ctn .table-form .input-text .input-radio span {
+      display: inline-block;
+      vertical-align: middle;
+      font-family: MicrosoftYaHei;
+      font-size: 14px;
+      height: 50px;
+      line-height: 50px;
+      color: #333333;
+      letter-spacing: 0;
+      text-align: left; }
+      .popup-1 .popup-box .box-ctn .table-form .input-text .input-radio span img {
+        display: inline-block;
+        margin-right: 12px;
+        vertical-align: middle; }
+    .popup-1 .popup-box .box-ctn .table-form .input-text .input-radio .span-1 {
+      margin-left: 16px; }
+    .popup-1 .popup-box .box-ctn .table-form .input-text .input-radio .span-3,
+    .popup-1 .popup-box .box-ctn .table-form .input-text .input-radio .span-2 {
+      margin-left: 46px; }
+    .popup-1 .popup-box .box-ctn .table-form .input-text .file-load {
+      background: #ffffff;
+      border: 1px solid #e3e3e3;
+      border-radius: 2px;
+      /*.radio-box {
+              background:#ffffff;
+              border:1px dashed #e3e3e3;
+              border-radius:2px;
+              height:55px;
+              margin-left: 12px;
+              margin-right: 10px;
+
+              span {
+                font-family:MicrosoftYaHei;
+                font-size:14px;
+                color:#c0c0c0;
+                letter-spacing:0;
+                text-align:left;
+                height: 55px;
+                line-height: 55px;
+              }
+
+              .select-template {
+                display: inline-block;
+                float: right;
+                margin-right: 17px;
+                font-family:MicrosoftYaHei;
+                font-size:14px;
+                color:#20b9ff;
+                letter-spacing:0;
+                text-align:right;
+              }
+            }
+*/ }
+      .popup-1 .popup-box .box-ctn .table-form .input-text .file-load .radio-box-1 {
+        position: relative;
+        overflow: hidden;
+        z-index: 9; }
+        .popup-1 .popup-box .box-ctn .table-form .input-text .file-load .radio-box-1 .span-t {
+          height: 50px;
+          line-height: 50px;
+          vertical-align: middle; }
+          .popup-1 .popup-box .box-ctn .table-form .input-text .file-load .radio-box-1 .span-t img {
+            vertical-align: middle;
+            margin-left: 16px; }
+      .popup-1 .popup-box .box-ctn .table-form .input-text .file-load .radio-box1 {
+        background: #ffffff;
+        position: relative;
+        z-index: 9;
+        border: 1px solid #e3e3e3;
+        border-radius: 2px;
+        height: 55px;
+        margin-left: 12px;
+        margin-right: 10px;
+        margin-top: 11px;
+        margin-bottom: 10px;
+        vertical-align: middle;
+        overflow: hidden; }
+        .popup-1 .popup-box .box-ctn .table-form .input-text .file-load .radio-box1 input {
+          display: block;
+          font-size: 100px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 99;
+          opacity: 0; }
+        .popup-1 .popup-box .box-ctn .table-form .input-text .file-load .radio-box1 img {
+          display: inline-block;
+          vertical-align: middle;
+          float: left;
+          margin-top: 3.5px; }
+        .popup-1 .popup-box .box-ctn .table-form .input-text .file-load .radio-box1 span {
+          font-family: MicrosoftYaHei;
+          font-size: 14px;
+          color: #333333;
+          letter-spacing: 0;
+          text-align: left;
+          height: 55px;
+          line-height: 55px;
+          float: left; }
+        .popup-1 .popup-box .box-ctn .table-form .input-text .file-load .radio-box1 .span-1 {
+          color: #c0c0c0; }
+        .popup-1 .popup-box .box-ctn .table-form .input-text .file-load .radio-box1 .select-template {
+          display: inline-block;
+          position: relative;
+          z-index: 999;
+          float: right;
+          margin-right: 17px;
+          font-family: MicrosoftYaHei;
+          font-size: 14px;
+          color: #20b9ff;
+          letter-spacing: 0;
+          text-align: right; }
+        .popup-1 .popup-box .box-ctn .table-form .input-text .file-load .radio-box1 .file-name {
+          max-width: 170px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+    .popup-1 .popup-box .box-ctn .table-form .input-text-1 {
+      border: 1px #e3e3e3 solid;
+      height: 30px;
+      max-height: 40px;
+      min-height: 40px; }
+
+.btn-style:hover {
+  border: 1px #20b9ff solid !important;
+  color: #20b9ff !important;
+  background-color: #fff !important;
+  cursor: pointer; }
+
+.btn-style:active {
+  cursor: pointer;
+  color: #fff !important;
+  border: 1px #20b9ff solid;
+  background-color: #20b9ff !important; }

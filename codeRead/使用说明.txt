@@ -1,0 +1,10 @@
+该解析过程需要java环境支持，jar包启动后在本机的20147端口接受socket监听，因此网络编程语言都可以调用。
+1 命令行启动jar包
+
+java -jar QRCodeDecodeServer_fat.jar
+
+启动成功应该能看到20147端口的应用
+
+2服务socket调用
+
+暂提供php调用代码

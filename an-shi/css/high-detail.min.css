@@ -1,0 +1,118 @@
+ul,
+ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.main {
+  display: table;
+  background: #f9f9f9;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px; }
+  .main .title {
+    padding-top: 80px;
+    font-family: MicrosoftYaHei;
+    font-size: 36px;
+    color: #333333;
+    letter-spacing: 0;
+    text-align: center; }
+  .main .category {
+    display: table;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    width: 1200px;
+    collapse: 0;
+    height: 62px; }
+    .main .category .cell-l {
+      display: table-cell;
+      background: #20b9ff;
+      box-shadow: inset -1px 0 0 0 #ffffff;
+      width: 153px;
+      height: 62px;
+      font-family: MicrosoftYaHei;
+      font-size: 16px;
+      line-height: 62px;
+      padding-left: 27px;
+      color: #ffffff;
+      letter-spacing: 0;
+      text-align: left; }
+    .main .category .cell-r {
+      display: table-cell;
+      background: #20b9ff;
+      box-shadow: inset 1px 0 0 0 #ffffff;
+      width: 393px;
+      height: 62px;
+      line-height: 62px;
+      padding-left: 27px;
+      font-family: MicrosoftYaHei;
+      font-size: 16px;
+      color: #ffffff;
+      letter-spacing: 0;
+      text-align: left; }
+  .main .main-table {
+    overflow: hidden;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-top: 1px #e3e3e3 solid; }
+    .main .main-table .table-l {
+      display: table-cell;
+      width: 153px;
+      padding-left: 27px;
+      line-height: 76px;
+      font-family: MicrosoftYaHei;
+      font-size: 16px;
+      color: #2784d9;
+      letter-spacing: 0;
+      text-align: left; }
+    .main .main-table .table-r-1 .ul-1 {
+      border-radius: 4px; }
+      .main .main-table .table-r-1 .ul-1 li {
+        padding: 20px 0; }
+      .main .main-table .table-r-1 .ul-1 .cell {
+        font-family: MicrosoftYaHei;
+        font-size: 16px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 36px;
+        text-align: left; }
+    .main .main-table .ul-2 {
+      border-bottom: 1px #e3e3e3 solid;
+      margin-bottom: 12px; }
+    .main .main-table .table-r {
+      display: table-cell;
+      width: 1020px; }
+      .main .main-table .table-r ul {
+        display: table;
+        border-bottom: 1px #e3e3e3 solid; }
+        .main .main-table .table-r ul:last-child {
+          border-bottom: 0; }
+        .main .main-table .table-r ul .cell-l {
+          width: 153px;
+          padding-left: 27px;
+          font-family: MicrosoftYaHei;
+          font-size: 16px;
+          color: #6e7184;
+          letter-spacing: 0;
+          text-align: left; }
+        .main .main-table .table-r ul .cell {
+          display: table-cell;
+          background: #fff;
+          box-shadow: inset 1px 0 0 0 #ffffff;
+          width: 393px;
+          height: 76px;
+          line-height: 76px;
+          padding-left: 27px;
+          font-family: MicrosoftYaHei;
+          font-size: 16px;
+          color: #333333;
+          letter-spacing: 0;
+          text-align: left; }
+  .main .main-style {
+    padding-bottom: 12px; }
+  .main .last-style {
+    border-bottom: 1px #e3e3e3 solid; }
