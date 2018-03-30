@@ -1,0 +1,250 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #ffffff;
+  font: 12px/1.5 "MicrosoftYaHei","microsoft yahei", "simhei", "宋体", tahoma, arial, sans-serif; }
+
+.bg {
+  background-image: url(../images/web_BG.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.68); }
+
+.container {
+  width: 1440px;
+  margin: 0 auto; }
+
+.bar-head {
+  display: block;
+  padding-top: 40px; }
+  .bar-head img {
+    display: inline-block;
+    vertical-align: top;
+    width: 89px;
+    height: 24px;
+    border: 0;
+    margin-left: 145px; }
+  .bar-head a {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 5px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #ffffff;
+    letter-spacing: 0;
+    text-align: center;
+    margin-left: 50px; }
+  .bar-head .clear-margin {
+    margin-left: 185px; }
+  .bar-head .select {
+    border-bottom: 2px #c40000 solid; }
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 22px;
+  width: 100%;
+  z-index: 99; }
+  .footer p {
+    padding: 0 30px;
+    font-size: 14px;
+    color: #ffffff;
+    letter-spacing: 0.39px; }
+    .footer p .font-color {
+      color: #c40000; }
+    .footer p .right-span {
+      display: inline-block;
+      float: right; }
+
+.indicate {
+  position: absolute;
+  right: 30px;
+  top: 387px;
+  width: 17px;
+  z-index: 99;
+  text-align: center; }
+  .indicate .spot {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.5);
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin-top: 10px;
+    opacity: 0.52; }
+  .indicate .border {
+    display: inline-block;
+    border: 1px solid #c40000;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    opacity: 0.52;
+    line-height: 15px; }
+    .indicate .border .spot_1 {
+      margin-top: -5px;
+      background-color: #c40000; }
+  .indicate .margin {
+    margin-top: 10px; }
+
+#index .content {
+  position: relative;
+  z-index: 0;
+  margin-top: 98px;
+  height: 580px; }
+  #index .content .phone-show {
+    position: absolute;
+    top: 0;
+    left: 288px;
+    width: 293px;
+    height: 580px;
+    background-image: url("../images/web_Apple.png");
+    background-repeat: no-repeat;
+    background-size: 293px 580px;
+    background-position: center;
+    vertical-align: top; }
+    #index .content .phone-show img {
+      display: inline-block;
+      position: relative;
+      z-index: 9;
+      margin-left: 23px;
+      margin-top: 73px;
+      vertical-align: top;
+      width: 241px;
+      height: 428px; }
+  #index .content .down-info {
+    padding-left: 646px;
+    padding-top: 70px; }
+    #index .content .down-info .down-logo {
+      display: inline-block;
+      vertical-align: top; }
+    #index .content .down-info .down-title {
+      margin-top: 34px;
+      font-size: 20px;
+      color: #d8d8d8;
+      letter-spacing: 0.56px; }
+    #index .content .down-info .down-code {
+      margin-top: 30px; }
+      #index .content .down-info .down-code img {
+        display: inline-block;
+        vertical-align: top;
+        width: 130px;
+        height: 130px; }
+      #index .content .down-info .down-code span {
+        display: inline-block;
+        border: 1px solid #9b9b9b;
+        border-radius: 4px;
+        width: 183px;
+        height: 57px;
+        line-height: 57px;
+        font-size: 20px;
+        margin-top: 35px;
+        color: #d8d8d8;
+        letter-spacing: 0.56px;
+        text-align: center;
+        margin-left: 30px; }
+        #index .content .down-info .down-code span img {
+          display: inline-block;
+          vertical-align: middle;
+          width: 22px;
+          height: 27px;
+          margin-right: 20px; }
+
+#aboutWe .content {
+  position: relative;
+  z-index: 0;
+  margin-top: 43px;
+  margin-left: 213px;
+  margin-right: 250px;
+  height: 520px;
+  background-color: #f2f2f2; }
+  #aboutWe .content .menu-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 230px;
+    height: 520px; }
+    #aboutWe .content .menu-left a {
+      display: block;
+      padding-left: 23px;
+      font-size: 14px;
+      color: #272427;
+      letter-spacing: 0;
+      text-align: left;
+      background: #f2f2f2;
+      text-decoration: none;
+      box-shadow: inset 0 -1px 0 0 #f2f2f2;
+      height: 50px;
+      line-height: 50px; }
+      #aboutWe .content .menu-left a .arrow {
+        float: right;
+        margin-right: 26px; }
+    #aboutWe .content .menu-left .select-us {
+      border-left: 5px #c40000 solid;
+      color: #c40000; }
+  #aboutWe .content .menu-right {
+    padding-left: 230px; }
+    #aboutWe .content .menu-right .title {
+      height: 50px;
+      line-height: 50px;
+      font-size: 14px;
+      color: #272427;
+      letter-spacing: 0;
+      padding-left: 24px; }
+    #aboutWe .content .menu-right article {
+      padding: 22px 23px 0 24px; }
+      #aboutWe .content .menu-right article p {
+        font-size: 14px;
+        color: #6e7184;
+        letter-spacing: 0;
+        line-height: 28px;
+        text-align: justify; }
+  #aboutWe .content .menu-english {
+    display: none; }
+
+#aboutWe .select-english {
+  height: 700px; }
+  #aboutWe .select-english .menu-left .select-us {
+    border: 0;
+    color: #2d2c33; }
+  #aboutWe .select-english .menu-left .select-en {
+    border-left: 5px #c40000 solid;
+    color: #c40000; }
+  #aboutWe .select-english .menu-us {
+    display: none; }
+  #aboutWe .select-english .menu-english {
+    display: block; }
+    #aboutWe .select-english .menu-english article p {
+      line-height: 24px; }
+
+#contactWe .content {
+  margin-top: 23px; }
+  #contactWe .content .code-list {
+    margin-left: 420px; }
+    #contactWe .content .code-list .item {
+      margin-top: 20px;
+      height: 130px;
+      line-height: 130px;
+      font-size: 18px;
+      color: #d8d8d8;
+      letter-spacing: 0;
+      text-align: justify; }
+      #contactWe .content .code-list .item img {
+        display: inline-block;
+        vertical-align: top;
+        width: 130px;
+        height: 130px;
+        border: 0;
+        margin-right: 30px; }
+  #contactWe .content article {
+    margin-top: 40px; }
+    #contactWe .content article p {
+      font-size: 14px;
+      color: #d8d8d8;
+      letter-spacing: 0;
+      line-height: 30px;
+      text-align: justify; }

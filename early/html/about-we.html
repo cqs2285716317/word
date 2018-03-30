@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="../css/base.css">
+  <link rel="stylesheet" href="../css/index.min.css">
+  <title>关于行早</title>
+  <script type="text/javascript" src="../js/html5shiv-printshiv-3.js"></script>
+</head>
+<body class="bg" id="aboutWe">
+  <div class="container" id="bg">
+    <header class="bar-head">
+      <img src="../images/web_logo.png" alt="logo">
+
+      <a class="clear-margin" href="../index.html">首页</a>
+      <a class="select" href="./about-we.html">关于行早</a>
+      <a href="contact-we.html">联系我们</a>
+    </header>
+
+    <div class="content" id="content">
+        <div class="menu-left">
+          <a class="select-us" href="#" onclick="reClass()">关于行早（中文）<span class="arrow">></span></a>
+          <a class="select-en" href="#" onclick="addClass()">About XCPE（English）<span class="arrow">></span></a>
+        </div>
+        <div class="menu-right menu-us">
+            <p class="title">关于行早（中文）</p>
+
+            <article>
+              <p>行早股权投资俱乐部（简称“XCPE”）是行早金融发起的股权投资人社群。已在温州汇聚了一批有意愿投资于“新型创新企业”的股权投资爱好者，以及对新行业、新模式、新技术有强烈学习意愿的人群，俱乐部坐落于风景优美的国家AAAA级景区—白鹿洲公园，在这里在这个互联网技术崛起的时代，象征着第三次技术革命的爆发，许多传统产业都在升级，甚至被颠覆，如何更好的参与到这个黄金的时代，布局属于自己的未来？成为了困扰投资人的一大问题；为了使更多的人具备这种未来视野，俱乐部致力于为会员提供学习股权投资知识、了解最新投资资讯与行业动向，提供更多参与到前沿商业模型与科学技术的机会。因此，会员在俱乐部将享受以下优质服务与体验：</p>
+              <p>【股权投资商学院】定期举办会员线下活动，以沙龙、半月谈、实战班、主题讲座等形式向会员普及股权投资知识，就最新行业资讯、前沿科技、投资经验进行分享交流。</p>
+              <p>【走出去】为会员提供前往“创新创业圣地”（包括国内一线城市、美国东西部、以色列等）进行学习、考察的机会。在“访学之旅”中，会员能够了解高科技发展趋势，对话知名创业企业及创投机构，与最前沿创客空间、潜力项目进行交流。</p>
+              <p>【请进来】 每月将会邀请优质项目的CEO到现场与会员进行项目路演。如有融资需求的项目，并有机会以机构领投+会员跟投的模式，以小额资金参与高门槛的股权投资，实现资产的保值、增值。</p>
+            </article>
+        </div>
+      <div class="menu-right menu-english">
+        <p class="title">About XCPE (Xingzao Club of Private Equity)</p>
+
+        <article>
+          <p>xXCPE is a investor community, launched by Xinzao Finance. It has gathered a group of equity investment enthusiasts who are involved to invest the “New-type Innovation Enterprise” and other people who have strong desire to know about new industry, modes and technology. The club is located in Balizhou Park, Wenzhou, a beautiful national-level AAAA scenic spot.</p>
+          <p>In the third age of the technology revolution, led by the internet technology, great traditional industries are gradually updated and even overturned. Everyone has got a chance to grasp this golden time to arrange for their future. In order to make more people hold this kind of future vision, XCPE devotes itself to offering members more chances to study the equity investment knowledge, to understand the newest investment information and industry dynamics, to participate in the front edge of the commercial mode and advanced technology. Therefore, the members will enjoy the following optimized service and experience in this club.</p>
+          <p>1. “Equity Investment Business School”: XCPE regularly holds members’ offline activities to spread some equity investment information via Salon, Half-monthly talking and other lectures. Members can share with each other and communicate around the field of newest industry information, and first-edge technology.</p>
+          <p>2. “Innovation and Entrepreneurship Tour”: XCPE would provide its members trips to the “Startup Mecca”, such as Shanghai, Beijing, Hangzhou, Silicon of America and so on, in order to get chances of exchange, study and investigation. During the travel of visiting, members are able to understand the developmental trend of the advanced technology, to have a more efficient communication with renowned enterprises and to investigate the first-edge incubators or startup projects.</p>
+          <p>3. “Spotlight”: each month, XCPE would invite CEO of the proposed investment projects to club and pitch the roadshow to present new ideas and their commercial logics with our members. What’s more, if members have the demand, they could participate in these first-edge projects to realize the hedging and value adding by the model of “institutions led plus members participated”.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="indicate">
+      <span class="spot"></span>
+      <span class="border margin"><span class="spot spot_1"></span></span>
+      <span class="spot"></span>
+    </div>
+
+    <footer class="footer">
+      <p><span class="font-color">02</span>/03  <span class="right-span"><span class="font-color">行早</span>股权投资俱乐部</span></p>
+    </footer>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery.mousewheel.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(document).mousewheel(function(event,delta){
+        if(delta == 1){
+          window.location.href = '../index.html';
+        }
+        if(delta == -1){
+          window.location.href = 'contact-we.html';
+        }
+      });
+    });
+
+    function addClass() {
+      $('#content').addClass('select-english');
+    }
+
+    function reClass() {
+      $('#content').removeClass('select-english');
+    }
+
+    var win_h = $(window).height();
+    win_h = win_h >= 840 ? win_h : 840;
+    $('#bg').css('height', win_h + 'px');
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="../css/base.css">
+  <link rel="stylesheet" href="../css/index.min.css">
+  <title>联系我们</title>
+  <script type="text/javascript" src="../js/html5shiv-printshiv-3.js"></script>
+</head>
+<body class="bg" id="contactWe">
+  <div class="container" id="bg">
+    <header class="bar-head">
+      <img src="../images/web_logo.png" alt="logo">
+
+      <a class="clear-margin" href="../index.html">首页</a>
+      <a href="about-we.html">关于行早</a>
+      <a class="select" href="./contact-we.html">联系我们</a>
+    </header>
+
+    <div class="content">
+        <div class="code-list">
+          <div class="item">
+            <img src="../images/web_appcode.png" alt="二维码">
+            加入 XCPE+ / iPhone下载
+          </div>
+          <div class="item">
+            <img src="../images/web_appcode.png" alt="二维码">
+            加入 XCPE+ / Android下载
+          </div>
+          <div class="item">
+            <img src="../images/web_code3.png" alt="二维码">
+            关注XCPE公众号+
+          </div>
+          <div class="item">
+            <img src="../images/web_code4.png" alt="二维码">
+            关注行早创投+
+          </div>
+
+          <article>
+            <p>联系方式 0577-56950860</p>
+            <p>行早股权投资俱乐部：温州鹿城区南塘白鹿洲公园5号楼</p>
+          </article>
+        </div>
+    </div>
+
+    <div class="indicate">
+      <span class="spot"></span>
+      <span class="spot"></span>
+      <span class="border margin"><span class="spot spot_1"></span></span>
+    </div>
+
+    <footer class="footer">
+      <p><span class="font-color">03</span>/03  <span class="right-span"><span class="font-color">行早</span>股权投资俱乐部</span></p>
+    </footer>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery.mousewheel.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(document).mousewheel(function(event,delta){
+        if(delta == 1){
+          window.location.href = 'about-we.html';
+        }
+      });
+    });
+
+    var win_h = $(window).height();
+    win_h = win_h >= 840 ? win_h : 840;
+    $('#bg').css('height', win_h + 'px');
+  </script>
+</body>
+</html>
