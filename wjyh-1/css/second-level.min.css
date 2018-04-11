@@ -1,0 +1,26 @@
+.list-box li h3 {
+  margin-bottom: 10px;
+}
+
+.page {
+  bottom: 17px;
+}
+
+.list-box {
+  padding: 0px 25px 0 30px;
+}
+
+.pageMenu {
+  margin-top: 10px;
+}
+
+.main_con_b_left {
+  height: 1530px;
+  /**height: 1546px;*/
+  /*_height: 1620px;*/
+  _height: 1522px;
+}
+
+.recommend {
+  height: 721px;
+}

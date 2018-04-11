@@ -1,0 +1,44 @@
+.list-box {
+  padding: 10px 25px 0 30px; }
+  .list-box li {
+    font-size: 22px;
+    padding: 25px;
+    color: #848282;
+    border-top: 1px #a0a0a0 dashed; }
+    .list-box li:first-child {
+      border: 0; }
+    .list-box li h3 {
+      font-size: 22px;
+      color: #636363;
+      overflow: hidden;
+      white-space: nowrap;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis; }
+    .list-box li p {
+      font-size: 14px;
+      line-height: 1.5; }
+    .list-box li .word {
+      padding-left: 20px;
+      margin-bottom: 10px; }
+
+.page {
+  bottom: 27px; }
+
+.hot .hot-list li {
+  height: 35px;
+  line-height: 35px;
+  _height: 33px;
+  _line-height: 33px; }
+
+.hot .hot-date .hot_con {
+  width: 285px; }
+
+.main_con_b_left {
+  height: 1755px;
+  _height: 1745px; }
+
+.recommend {
+  height: 946px; }
+
+.main_con_b_left h2 {
+  padding-left: 48px; }

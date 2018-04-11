@@ -1,0 +1,25 @@
+.list-box {
+  padding: 0 20px; }
+  .list-box a {
+    display: inline-block;
+    margin-left: 60px;
+    margin-top: 35px;
+    color: #636363;
+    font-size: 16px; }
+    .list-box a:hover {
+      text-decoration: underline; }
+
+.page {
+  bottom: 20px; }
+
+.hot .hot-list li {
+  height: 35px;
+  line-height: 35px;
+  _height: 33px;
+  _line-height: 33px; }
+
+.hot .hot-date .hot_con {
+  width: 285px; }
+
+.main_con_b_left h2 {
+  padding-left: 48px; }
