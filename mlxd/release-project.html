@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>码力兄弟</title>
+    <meta name="description" content="码力兄弟是一家高品质的软件开发服务公司，尤其擅长APP、微信、网站等应用类开发。码力兄弟作为习为天使基金的LP，可对创业公司提供种子轮或天使轮的股权投资"/>
+    <meta name="keywords" content="APP、微信、网站等应用类开发"/>
+    <meta name="copyright" content="上海易推信息科技有限公司"/>
+    <meta name="author" content="evil_web（429391294@qq.com）"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+    <link rel="stylesheet" type="text/css" href="src/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <!--[if lte IE 9]>
+        <script type="text/javascript" src="js/html5shiv-printshiv-3.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="bg">
+    <div class="nav">
+        <h2 class="logo" id="logo">
+            <img src="images/logo.png" alt="码力兄弟">
+        </h2>
+        <a href="javascript:;" class="nav-item nav-item-hover">首页</a>
+        <a href="javascript:;" class="nav-item">项目</a>
+        <div  class="user">
+            <ul class="ul-user none">
+                <li><a class="user-item" href="javascript:;">我的简历</a></li>
+                <li><a class="user-item" href="javascript:;">我的订单</a></li>
+                <li><a class="user-item" href="javascript:;">修改密码</a></li>
+                <li><a class="user-item" href="javascript:;">退出登录</a></li>
+            </ul>
+            <img class="user-img" src="images/icon_userBig.png" alt="">
+        </div>
+    </div>
+    <div class="container">
+        <form class="layui-form layui-form-pane1" action="">
+            <div class="box releaseP-box">
+                <p class="name">
+                    <img src="images/Pic_NewProject.png" alt="">
+                    发布项目
+                </p>
+                    <div class="releaseP-step1">
+                        <p class="step-tit">
+                            第一步：填写项目信息
+                        </p>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label pro-tit">项目名称</label>
+                            <input type="text" name="title" lay-verify="title" required placeholder="项目名称" autocomplete="off" class="layui-input pro-input">
+                        </div>
+                        <div class="layui-form-item ability-checkbox">
+                            <div class="layui-inline">
+                                <label class="layui-form-label pro-tit">选择行业（多选）</label>
+                                <input type="checkbox" name="like[type01]" title="电子商务">
+                                <input type="checkbox" name="like[type02]" title="企业服务">
+                                <input type="checkbox" name="like[type03]" title="社交">
+                                <input type="checkbox" name="like[type04]" title="房产">
+                                <input type="checkbox" name="like[type05]" title="安全">
+                                <input type="checkbox" name="like[type06]" title="智能硬件">
+                                <input type="checkbox" name="like[type07]" title="智能硬件对接">
+                                <input type="checkbox" name="like[type08]" title="聊天室">
+                                <input type="checkbox" name="like[type09]" title="好的那儿">
+                                <input type="checkbox" name="like[type10]" title="园区">
+                                <input type="checkbox" name="like[type11]" title="安全">
+                                <input type="checkbox" name="like[type12]" title="团购">
+                                <input type="checkbox" name="like[type13]" title="北京市昌平区上坡家园2号楼1106">
+                                <input type="checkbox" name="like[type13]" title="企业服务">
+                                <input type="checkbox" name="like[type13]" title="的工号">
+                                <input type="checkbox" name="like[type13]" title="其他">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label pro-tit pro-tit2">预算</label>
+                                <select name="quiz">
+                                    <option value="">请选择问题</option>
+                                    <option value="你工作的第一个城市">你工作的第一个城市</option>
+                                    <option value="你的工号">你的工号</option>
+                                    <option value="你最喜欢的老师">你最喜欢的老师</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="box1-row">
+                            <div class="box1 edit-checkbox">
+                                <label class="layui-form-label pro-tit pro-tit-function">工作职能（多选）</label>
+                                <input type="checkbox" name="like[type01]" title="B2B">
+                                <input type="checkbox" name="like[type02]" title="B2C">
+                                <input type="checkbox" name="like[type03]" title="C2C">
+                                <input type="checkbox" name="like[type04]" title="O2O">
+                                <input type="checkbox" name="like[type05]" title="团购">
+                                <input type="checkbox" name="like[type06]" title="导购返利">
+                                <input type="checkbox" name="like[type07]" title="神奇移动">
+                                <input type="checkbox" name="like[type08]" title="C2C">
+                                <input type="checkbox" name="like[type09]" title="团购">
+                                <input type="checkbox" name="like[type10]" title="导购返利">
+                                <input type="checkbox" name="like[type11]" title="O2O">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label pro-tit">期望交付日期</label>
+                            <div class="layui-input-inline">
+                                <input required type="text" id="layui-laydate-input" onclick="layui.laydate({elem: this})" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                            <label class="layui-form-label pro-tit">项目描述</label>
+                            <textarea placeholder="输入您的需求" class="layui-textarea"></textarea>
+                        </div>
+                        <div class="layui-form-item pro-upload">
+                            <label class="layui-form-label pro-tit">上传附件</label>
+                            <input type="file" name="file1" lay-type="file" lay-ext="zip|rar" placeholder="选择文件" class="layui-upload-file">
+                            <a href="javascript:;" class="delete-upload">
+                                <span>changxin628.zip(86%)</span>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+            </div>
+            <div class="box releaseP-box">
+                <div class="releaseP-step2">
+                    <p class="step-tit">
+                        第二步：填写联系人信息
+                    </p>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label pro-tit ">联系人姓名</label>
+                        <input type="text" name="title" lay-verify="title" required placeholder="请填写姓名" autocomplete="off" class="layui-input pro-input pro-input2">
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label pro-tit ">联系人手机号</label>
+                        <input type="text" name="title" lay-verify="title" required placeholder="请填写手机号码" autocomplete="off" class="layui-input pro-input pro-input2">
+                    </div>
+                </div>
+            </div>
+            <!--<a href="javascript:;" class="btn1 btn-apply-big btn320">提交</a>-->
+            <button class="layui-btn btn1 btn-apply-big" lay-submit lay-filter="*">立即发布</button>
+        </form>
+
+    </div>
+    <div class="footer">
+        <div class="container">
+            <a href="javascript:;" class="footer-logo">
+                <img src="images/logoholder3.png" alt="码力兄弟">
+            </a>
+            <div class="footer-nav-box">
+                <a class="footer-nav-item" href="javascript:;">关于我们</a>
+                <a class="footer-nav-item" href="javascript:;">联系我们</a>
+                <a class="footer-nav-item" href="javascript:;">常见问题</a>
+                <a class="footer-nav-item" href="javascript:;">媒体报道</a>
+                <a class="footer-nav-item" href="javascript:;">孵化器入驻</a>
+            </div>
+        </div>
+        <p class="cp">京ICP备9485290-8340       版权所有:上海易推信息科技有限公司</p>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="src/layui.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate = layui.laydate
+    });
+    layui.use('upload', function(){
+
+        layui.upload({
+            url: ''
+            ,success: function(src){
+                console.log(src)
+            }
+        });
+    });
+    layui.use('form', function(){
+        var form = layui.form();
+
+        //事件监听
+        form.on('select', function(data){
+            console.log(data);
+        });
+
+        form.on('select(aihao)', function(data){
+            console.log(data);
+        });
+
+        form.on('checkbox', function(data){
+            console.log(data.elem.checked);
+        });
+
+        form.on('switch', function(data){
+            console.log(data);
+        });
+
+        form.on('radio', function(data){
+            console.log(data);
+        });
+
+        //监听提交
+        form.on('submit(*)', function(data){
+            console.log(data)
+            return false;
+        });
+
+    });
+
+</script>
+</body>
+</html>
