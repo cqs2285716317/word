@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>填写公司信息</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="css/mui.min.css">-->
+  <link rel="stylesheet" href="../css/weui.min.css">
+  <link rel="stylesheet" href="../css/jquery-weui.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/renovation.css">
+
+  <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+  <script src="../js/load.js"></script>
+</head>
+<body class="bgcF4F4F4">
+  <section class="main">
+    <p class="block-p">以公司名义接单，将更受品牌方欢迎，如确认以个人名义接单，可跳过2、3步骤</p>
+    <div class="cqs-list">
+      <div class="cqs-list_hd">公司名称</div>
+      <div class="cqs-list_bd"><input type="text" placeholder="请输入公司名称"></div>
+    </div>
+    <div class="cqs-list">
+      <div class="cqs-list_hd">公司地址</div>
+      <div class="cqs-list_bd cqs-list_arrow"><input type="text" id="city" placeholder="重庆"><span class="arrow"></span></div>
+    </div>
+    <div class="cqs-list">
+      <div class="cqs-list_hd">详细地址</div>
+      <div class="cqs-list_bd"><input type="text" placeholder="请输入详细街道门牌信息"></div>
+    </div>
+
+  </section>
+
+  <script src="../js/util.js"></script>
+  <script src="../js/lib/jquery.validate.js"></script>
+  <script src="../js/lib/city-picker.min.js"></script>
+  <script src="../js/rgLg.js"></script>
+
+<script>
+  /* 调用城市插件*/
+  $("#city").cityPicker({
+    title: "选择出发地",
+    onChange: function (picker, values, displayValues) {
+      // console.log(values, displayValues);
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>注册</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="css/mui.min.css">-->
+  <link rel="stylesheet" href="./css/weui.min.css">
+  <link rel="stylesheet" href="./css/jquery-weui.css">
+  <link rel="stylesheet" href="css/common.css">
+
+  <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+  <script src="js/load.js"></script>
+</head>
+<body>
+  <section class="main">
+    <div class="logo"><img src="images/logo_h5login.png" alt="logo"></div>
+
+    <div class="rg-main_con">
+      <form action="#" id="myForm">
+        <div class="input-group">
+          <div class="input-group-row">
+            <label for="phone"><img src="images/icon_user.png" alt="icon"></label>
+            <input id="phone" name="phone" maxlength="11" minlength="11" type="text" placeholder="请输入手机号">
+            <div class="input-clear none"><img src="images/btn_delete_grey.png" alt="清空"></div>
+          </div>
+
+          <div class="input-group-row input-group-code">
+            <label for="code"><img src="images/icon_key.png" alt="icon"></label>
+            <input id="code" name="code" maxlength="6" type="text" placeholder="请输入验证码">
+            <div class="input-clear none"><img src="images/btn_delete_grey.png" alt="清空"></div>
+            <div class="verify-box"><button class="verify-btn" id="jsVerify" disabled="disabled">发送验证码</button></div>
+          </div>
+        </div>
+
+        <button class="btn-block mgt80" disabled="disabled" type="submit">下一步</button>
+
+      </form>
+    </div>
+  </section>
+
+
+  <script src="js/util.js"></script>
+  <script src="js/lib/jquery.validate.js"></script>
+  <script src="js/rgLg.js"></script>
+</body>
+</html>

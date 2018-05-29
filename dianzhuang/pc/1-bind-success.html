@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>绑定新手机-绑定成功</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./js/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/join.css">
+
+  <!--[if lt IE 9]>
+  <script src="./js/lib/html5shiv-printshiv-3.js"></script>
+  <![endif]-->
+</head>
+<body class="bgcf9f9f9">
+<!-- 头部 begin-->
+<header>
+  <div class="header">
+    <div class="cqs-main">
+      <a class="logo" href="./index.html"><img src="./images/logo_head.png" alt="logo"></a>
+
+      <div class="header-right">
+        <a href="" class="interval_30">主页</a>
+        <a href="" class="interval_30 header-hover">00123456
+          <div class="header-hover_bg">
+            <div class="header-hover_bg-item">公司信息</div>
+            <div class="header-hover_bg-item active">设置</div>
+          </div>
+        </a>
+        <a href="" class="">消息</a>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- 头部 end-->
+
+<!-- main begin-->
+<main class="cqs-main">
+
+  <section class="bind-phone-main clearfix">
+    <!-- left begin-->
+    <div class="bind-phone-main_left">
+      <ul class="menu">
+        <li><a href="">公司信息</a></li>
+        <li class="active"><a href="">设置</a></li>
+      </ul>
+    </div>
+    <!-- left end-->
+
+    <!-- right begin-->
+    <div class="bind-phone-main_right">
+      <section class="msg-box">
+        <div class="success-icon"><img src="./images/icon_complete.png" alt="icon"></div>
+        <p class="success-title">绑定成功</p>
+        <p class="success-info">您已绑定新的手机号</p>
+        <a class="complete-link" href="javascript:;">前往首页 ></a>
+      </section>
+    </div>
+    <!-- right end-->
+  </section>
+
+</main>
+<!-- main end-->
+
+<!-- footer begin-->
+<footer>
+  <section class="cqs-main">
+    <ul class="footer-main">
+      <li><a href="./index.html"><img src="./images/logo_footer.png" alt=""></a></li>
+      <li>
+        <ul>
+          <li><a href="">关于我们</a></li>
+          <li><a href="">品牌故事</a></li>
+          <li><a href="">联系我们</a></li>
+          <li><a href="">常见问题</a></li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li><a href="">我们的服务</a></li>
+          <li><a href="">基础服务</a></li>
+          <li><a href="">专业施工</a></li>
+          <li><a href="">装修保障</a></li>
+          <li><a href="">第三方监理</a></li>
+        </ul>
+      </li>
+      <li>
+        <img src="./images/icon_dsfjl.png" alt="">
+        <p>【关注公众号】</p>
+      </li>
+    </ul>
+
+    <p class="copy">Copyright © 2017 All Rights Reserved 上海蜜蜂信息科技有限公司 备案号：沪ICP备16031883号</p>
+  </section>
+</footer>
+<!-- footer end-->
+
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/layui/layui.all.js"></script>
+<script>
+  $(function () {
+    var tab = $('.tab');
+
+    $(document).on('click','.tab',function () {
+      tab.each(function () {
+        $(this).removeClass('active');
+      });
+
+      $(this).addClass('active');
+    });
+  });
+</script>
+</body>
+</html>

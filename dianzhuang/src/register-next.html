@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>注册</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="css/mui.min.css">-->
+  <link rel="stylesheet" href="./css/weui.min.css">
+  <link rel="stylesheet" href="./css/jquery-weui.css">
+  <link rel="stylesheet" href="css/common.css">
+
+  <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+  <script src="js/load.js"></script>
+</head>
+<body>
+  <section class="main">
+    <div class="logo"><img src="images/logo_h5login.png" alt="logo"></div>
+
+    <div class="rg-main_con">
+      <form action="#" id="myForm">
+        <div class="input-group">
+          <div class="input-group-row">
+            <label for="psd"><img src="images/icon_user.png" alt="icon"></label>
+            <input id="psd" name="psd" maxlength="16" minlength="6" type="password" placeholder="密码为6-16位数字、字母或下划线">
+            <div class="input-clear none"><img src="images/btn_delete_grey.png" alt="清空"></div>
+          </div>
+
+          <div class="input-group-row">
+            <label for="confirmPsd"><img src="images/icon_key.png" alt="icon"></label>
+            <input id="confirmPsd" maxlength="16" name="confirmPsd" type="password" placeholder="请再次输入密码">
+            <div class="input-clear none"><img src="images/btn_delete_grey.png" alt="清空"></div>
+          </div>
+        </div>
+
+        <button class="btn-block mgt80" disabled="disabled" type="submit">提交</button>
+
+        <p class="rg-protocol">注册表明已阅读并接受 <a href="#" class="cl4E96F7">《用户服务协议》</a></p>
+
+        <p class="rg-lg">已有账号？<a href="#">立即登录 <img src="images/icon_rightarrow_yellow.png" alt="右"></a></p>
+      </form>
+    </div>
+  </section>
+
+  <script src="js/util.js"></script>
+  <script src="js/lib/jquery.validate.js"></script>
+  <script src="js/rgLg.js"></script>
+</body>
+</html>

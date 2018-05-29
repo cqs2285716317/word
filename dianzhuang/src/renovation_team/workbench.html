@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>工作台</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="css/mui.min.css">-->
+  <link rel="stylesheet" href="../css/weui.min.css">
+  <link rel="stylesheet" href="../css/jquery-weui.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/renovation.css">
+  <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+  <script src="../js/load.js"></script>
+</head>
+<body class="bgcF4F4F4">
+  <section class="main mgb98">
+    <section class="workbench-head">
+      <div class="workbench-head_item">
+        <p class="number">15</p>
+        <p>审批中</p>
+      </div>
+      <div class="workbench-head_item">
+        <p class="number">15</p>
+        <p>进行中</p>
+      </div>
+      <div class="workbench-head_item">
+        <p class="number">15</p>
+        <p>已结束</p>
+      </div>
+    </section>
+
+    <section class="workbench-order_state">
+      <p class="title">订单状态</p>
+      
+      <div class="order_state-list">
+        <div class="order_state-list_item">
+          <div class="icon">
+            <img src="../renovation/icon_yizhongbiao.png" alt="">
+            <span class="badge">4</span>
+          </div>
+          <p>已中标</p>
+        </div>
+        <div class="order_state-list_item">
+          <div class="icon">
+            <img src="../renovation/icon_fuwuzhong.png" alt="">
+            <span class="badge">23</span>
+          </div>
+          <p>服务中</p>
+        </div>
+        <div class="order_state-list_item">
+          <div class="icon">
+            <img src="../renovation/icon_yiyanshou.png" alt="">
+            <span class="badge">5</span>
+          </div>
+          <p>已验收</p>
+        </div>
+        <div class="order_state-list_item">
+          <div class="icon">
+            <img src="../renovation/icon_yiquxiao.png" alt="">
+            <span class="badge">4</span>
+          </div>
+          <p>已取消</p>
+        </div>
+        <div class="order_state-list_item">
+          <div class="icon">
+            <img src="../renovation/icon_yiwanjie.png" alt="">
+            <span class="badge">5</span>
+          </div>
+          <p>已完结</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer begin-->
+    <div class="weui-tabbar">
+      <a href="get-work.html" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon">
+          <img src="../renovation/tar_jiehuo_n.png" alt="接活">
+        </div>
+        <p class="weui-tabbar__label">接活</p>
+      </a>
+      <a href="workbench.html" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon">
+          <img class="icon" src="../images/tar_project_n.png" alt="工作台">
+          <img class="on-icon" src="../images/tar_project_h.png" alt="工作台">
+        </div>
+        <p class="weui-tabbar__label">工作台</p>
+      </a>
+      <a href="me.html" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon">
+          <img src="../images/tar_user_n.png" alt="我的">
+        </div>
+        <p class="weui-tabbar__label">我的</p>
+      </a>
+    </div>
+    <!-- footer end-->
+  </section>
+
+  <script src="../js/util.js"></script>
+  <script src="../js/lib/jquery.validate.js"></script>
+  <script src="../js/rgLg.js"></script>
+</body>
+</html>

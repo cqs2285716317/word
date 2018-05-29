@@ -1,0 +1,72 @@
+.upload-group {
+    padding: .2rem .3rem;
+    background-color: #ffffff;
+}
+.upload-group textarea {
+    font-size:.28rem;
+    color:#605951;
+    width: 100%;
+    letter-spacing:0;
+    outline: none;
+    text-align:left;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    height: 3rem;
+}
+.upload-group .upload-img-box {
+    overflow: hidden;
+    margin-top: .2rem;
+}
+.upload-img-box .upload-img-box_item {
+    float: left;
+    margin-right: .15rem;
+    height: 1.6rem;
+    width: 2.4rem;
+    text-align: center;
+    margin-bottom: .2rem;
+    position: relative;
+    overflow: hidden;
+}
+.upload-img-box_item img {
+    width: 100%;
+    object-fit: cover;
+}
+.upload-img-box_item input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 100px;
+    z-index: 99;
+}
+.upload-img-box_item .photo {
+    margin-top: .4rem;
+    vertical-align: top;
+    width: .52rem;
+    margin-bottom: .19rem;
+}
+.upload-img-box_item .info {
+    font-size:.24rem;
+    color:#605951;
+    letter-spacing:0;
+    text-align:center;
+}
+.upload-img-box_item-add {
+    background: url("../images/bg_xuxiankuang_small.png") no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.upload-img-box_item .clear {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    background: url("../images/btn_delete_black.png") no-repeat center center;
+    -webkit-background-size: .36rem .36rem;
+    background-size: .36rem .36rem;
+    height: .36rem;
+    width: .36rem;
+}

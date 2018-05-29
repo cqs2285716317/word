@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>查看订单（服务后）</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./js/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/join.css">
+  <link rel="stylesheet" href="./css/decoration.css">
+
+  <!--[if lt IE 9]>
+  <script src="./js/lib/html5shiv-printshiv-3.js"></script>
+  <![endif]-->
+</head>
+<body class="bgcf9f9f9">
+<!-- 头部 begin-->
+<header>
+  <div class="header">
+    <div class="cqs-main">
+      <a class="logo" href="./index.html"><img src="./images/logo_head.png" alt="logo"></a>
+      <nav class="nav">
+        <ul>
+          <li><a href="">首页</a></li>
+          <li><a href="">订单管理</a></li>
+          <li><a href="">装修队管理</a></li>
+          <li><a href="">门店管理</a></li>
+          <li><a href="">物料管理</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right"><a class="interval">您好，张三【未认证】</a> <a href="">消息</a></div>
+    </div>
+  </div>
+</header>
+<!-- 头部 end-->
+
+<!-- main begin-->
+<main class="cqs-main">
+
+  <section class="bind-phone-main clearfix">
+    <!-- left begin-->
+    <div class="bind-phone-main_left">
+      <ul class="menu">
+        <li class="active"><a href="">订单管理</a></li>
+        <li><a href="">装修队管理</a></li>
+        <li><a href="">门店管理</a></li>
+        <li class="fold fold-open">
+          <a href="javascript:;" class="js-fold">物料管理</a>
+          <ul>
+            <li><a href="javascript:;">我的物料</a></li>
+            <li><a href="javascript:;">我的供应商</a></li>
+          </ul>
+        </li>
+
+        <li class="fold fold-open">
+          <a href="javascript:;" class="js-fold">消息提醒</a>
+          <ul>
+            <li><a href="javascript:;">招标反馈</a></li>
+            <li><a href="javascript:;">平台消息</a></li>
+          </ul>
+        </li>
+
+        <li class="fold fold-open">
+          <a href="javascript:;" class="js-fold">个人中心</a>
+          <ul>
+            <li><a href="javascript:;">基本资料</a></li>
+            <li><a href="javascript:;">企业认证</a></li>
+            <li><a href="" class="active">账号设置</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+    <!-- left end-->
+
+    <!-- 面包屑 begin-->
+    <span class="layui-breadcrumb ml20" lay-separator="＞">
+      <a href="">订单管理</a>
+      <a href="">查看订单</a>
+      <a href="">配发物料</a>
+    </span>
+    <!-- 面包屑 end-->
+
+    <!-- 订单 begin-->
+    <section class="bind-phone-main_con mt20 bgcffffff order-group">
+      <table class="layui-table no-border-table order-group-title">
+        <tbody>
+        <tr>
+          <td class="pl20">订单详情</td>
+        </tr>
+        </tbody>
+      </table>
+      <table class="layui-table no-border-table order-group-con">
+        <tbody>
+        <tr class="order-detail">
+          <td>
+            <p class="order-name">绿源电动车徐汇门店装修 <span class="exchange-date"><img src="./images/icon_renzheng.png" alt="">刚兑3个月</span> <span class="order-label">已具备开工条件</span> <span class="fr cl_ef4c4a">订金：30,000元</span></p>
+            <p>状态： <span class="cl_4098e8">4装修队投标</span></p>
+            <p>订单号：1234567890 <span class="ml50">下单时间：2018.01.01</span></p>
+
+            <div class="dashed-hr mt20"></div>
+
+            <div class="flow-box">
+              <div class="flow">
+                <div class="flow_item bgcfdc316">发布</div>
+                <div class="flow_item flow_item-line bgcfdc316 select_flow">竞标</div>
+                <div class="flow_item flow_item-line">结标</div>
+                <div class="flow_item flow_item-line">开工</div>
+                <div class="flow_item">评价</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+    <!-- 订单 end-->
+
+    <!-- 订单操作 begin-->
+    <section class="bind-phone-main_con">
+      <!-- 服务行业地区 begin-->
+      <div class="bgcffffff cqs-box">
+        <div class="layui-tab layui-tab-brief mt20" lay-filter="docDemoTabBrief">
+          <ul class="layui-tab-title">
+            <li class="layui-this">订单信息</li>
+            <li>投标装修队</li>
+          </ul>
+          <div class="layui-tab-content p30">
+            <div class="layui-tab-item layui-show">
+              <!-- 项目信息 begin-->
+              <p class="circle-h1">项目信息</p>
+              <p class="mt20">地址：上海市徐汇区宜山路101号</p>
+              <table class="layui-table no-border-table project-info">
+                <tbody>
+                  <tr>
+                    <td>承包类型：半包</td>
+                    <td>装修类型：新装</td>
+                    <td>面积：120平米</td>
+                    <td>预算：15w</td>
+                  </tr>
+                  <tr>
+                    <td>项目周期：30天</td>
+                    <td>预计开工：2018.2.10</td>
+                    <td>最晚完工：2018.2.10</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- 项目信息 end-->
+
+              <!-- 承包范围 begin-->
+              <p class="circle-h1 mt40">承包范围</p>
+              <div class="circle-h1_con clearfix">
+                <!-- 复选框begin-->
+                <div class="check-box">
+                  <div class="check-con_item">
+                    <input type="checkbox" disabled name="iCheck">
+                    <label>门头安装</label>
+
+                    <input type="checkbox" disabled name="iCheck">
+                    <label>电工布线</label>
+
+                    <input type="checkbox" disabled name="iCheck">
+                    <label>墙面粉刷</label>
+
+                    <input type="checkbox" disabled name="iCheck" >
+                    <label>地面工程</label>
+
+                    <input type="checkbox" disabled name="iCheck" >
+                    <label>木工（含吊顶及隔墙</label>
+
+                    <input type="checkbox" disabled name="iCheck" >
+                    <label>玻璃门及橱窗</label>
+
+                    <input type="checkbox" disabled name="iCheck" >
+                    <label>水路改造</label>
+
+                    <input type="checkbox" disabled name="iCheck" >
+                    <label>弱电工程</label>
+
+                  </div>
+                </div>
+                <!-- 复选框 end-->
+              </div>
+              <!-- 承包范围 end-->
+
+              <!-- 物流信息 begin-->
+              <p class="circle-h1 mt40">物流信息</p>
+              <div class="mt10 pr">
+                <p>配发地址：上海市徐汇区宜山路801号</p>
+                <p class="mt10">联系人：张二狗 <span class="ml150">手机号：12345678900</span></p>
+                <button class="go-pay">前往支付</button>
+              </div>
+              <table class="layui-table mt15 allotment-material-table" lay-skin="line">
+                <colgroup>
+                  <col width="180">
+                  <col width="100">
+                  <col width="100">
+                  <col width="120">
+                  <col>
+                </colgroup>
+                <thead>
+                <tr>
+                  <th class="pl10">配发物料</th>
+                  <th>预计到货</th>
+                  <th>运单号</th>
+                  <th class="tc">发货数量</th>
+                  <th>物流信息</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td class="pl10">喷绘大灯箱大灯箱X2</td>
+                  <td>2017.08.01</td>
+                  <td>1234567890</td>
+                  <td class="tc">X1</td>
+                  <td class="pr10">2017.10.15 12:00:00 <span class="ml10">快件离开北京正发往上海</span> <a href="" class="fr cl_4098e8">查看物流</a></td>
+                </tr>
+                <tr>
+                  <td class="pl10">喷绘大灯箱大灯箱X2</td>
+                  <td>2017.08.01</td>
+                  <td>1234567890</td>
+                  <td class="tc">X1</td>
+                  <td class="pr10">
+                    <p>2017.10.15 12:00:00 <span class="ml10">快件离开北京正发往上海</span> <a href="" class="fr cl_4098e8">查看物流</a></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pl10">喷绘大灯箱大灯箱X2</td>
+                  <td>2017.08.01</td>
+                  <td>1234567890</td>
+                  <td class="tc">X1</td>
+                  <td class="pr10">
+                    <p>2017.10.15 12:00:00 <span class="ml10">快件离开北京正发往上海</span> <a href="" class="fr cl_4098e8">查看物流</a></p>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <p class="unfold-all" id="unfoldAll">展开全部</p>
+              <!-- 物流信息 end-->
+
+              <!-- 项目说明 begin-->
+              <p class="circle-h1 mt25">项目说明</p>
+              <p class="mt20">项目描述：巴啦啦描述描述巴啦啦描述描述巴啦啦描述描述巴啦啦描述描述巴啦啦描述描述巴啦啦描述描述巴啦啦描述描述巴啦啦描述描述</p>
+              <p class="mt10">特殊要求：相关特殊要求特殊要求特殊要求特殊要求特殊要求</p>
+              <div class="mt10 article-box">
+                <p class="article-title">相关文档：</p>
+                <div class="article-con">
+                  <p><a href="" class="cl_4098e8">文档word111.doc</a></p>
+                  <p><a href="" class="cl_4098e8">文档word111.doc</a></p>
+                </div>
+              </div>
+              <!-- 项目说明 end-->
+
+              <!-- 验证标准 begin-->
+              <p class="circle-h1 mt40">验收标准</p>
+              <p class="mt15"><a class="cl_4098e8" href="">验收标准.doc</a></p>
+              <!-- 验证标准 end-->
+
+              <!-- 加盟商begin-->
+              <p class="circle-h1 mt40">加盟商</p>
+              <p class="mt20">名称：张三</p>
+              <p class="mt10">手机号：13900206717</p>
+              <!-- 加盟商 end-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 服务行业地区 end-->
+    </section>
+    <!-- 订单操作 end-->
+
+  </section>
+</main>
+<!-- main end-->
+
+<!-- footer begin-->
+<footer>
+  <section class="cqs-main">
+    <ul class="footer-main">
+      <li><a href="./index.html"><img src="./images/logo_footer.png" alt=""></a></li>
+      <li>
+        <ul>
+          <li><a href="">关于我们</a></li>
+          <li><a href="">品牌故事</a></li>
+          <li><a href="">联系我们</a></li>
+          <li><a href="">常见问题</a></li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li><a href="">我们的服务</a></li>
+          <li><a href="">基础服务</a></li>
+          <li><a href="">专业施工</a></li>
+          <li><a href="">装修保障</a></li>
+          <li><a href="">第三方监理</a></li>
+        </ul>
+      </li>
+      <li>
+        <img src="./images/icon_dsfjl.png" alt="">
+        <p>【关注公众号】</p>
+      </li>
+    </ul>
+
+    <p class="copy">Copyright © 2017 All Rights Reserved 上海蜜蜂信息科技有限公司 备案号：沪ICP备16031883号</p>
+  </section>
+</footer>
+<!-- footer end-->
+
+<script src="./js/lib/layui/layui.all.js"></script>
+<script src="js/lib/jquery.min.js"></script>
+<script src="./js/lib/icheck.min.js"></script>
+<script>
+
+  /* 左菜单折叠*/
+  $(function () {
+    $('.js-fold').click(function () {
+      $(this).parent().toggleClass('fold-open');
+    });
+
+    /* 展开全部*/
+    $('#unfoldAll').click(function () {
+      $(this).toggleClass('open-unfold-all');
+    });
+  });
+
+  /* 复选框*/
+  $(document).ready(function(){
+    $('input').each(function(){
+      var self = $(this),
+        label = self.next(),
+        label_text = label.text();
+
+      label.remove();
+      self.iCheck({
+        checkboxClass: 'icheckbox_line',
+        insert: '<div class="icheck_line-icon"></div>' + label_text
+      });
+    });
+
+  });
+</script>
+</body>
+</html>

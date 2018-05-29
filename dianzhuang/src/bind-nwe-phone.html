@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>设置名字</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="css/mui.min.css">-->
+  <link rel="stylesheet" href="./css/weui.min.css">
+  <link rel="stylesheet" href="./css/jquery-weui.css">
+  <link rel="stylesheet" href="css/common.css">
+
+  <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+  <script src="js/load.js"></script>
+</head>
+<body class="bgcF4F4F4">
+<section class="main">
+
+  <form action="#" id="myForm">
+    <div class="input-group-row input-update">
+      <input id="phone" name="phone" maxlength="11" type="tel" placeholder="请输入新手机号">
+      <div class="input-clear input-clear-center none"><img src="images/btn_delete_grey.png" alt="清空"></div>
+    </div>
+
+    <div class="input-group-row input-group-right input-update">
+      <input name="code" maxlength="6" type="tel" placeholder="请输入验证码">
+      <div class="input-clear none"><img src="images/btn_delete_grey.png" alt="清空"></div>
+      <button class="go-verify" id="jsVerify" disabled="disabled">获取验证码</button>
+    </div>
+
+    <button class="btn-block mgt80" disabled="disabled" type="submit">绑定新手机</button>
+
+  </form>
+</section>
+
+<script src="js/util.js"></script>
+<script src="js/lib/jquery.validate.js"></script>
+<script src="js/rgLg.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>新建订单-配发物料</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./js/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/join.css">
+  <link rel="stylesheet" href="./css/decoration.css">
+
+  <!--[if lt IE 9]>
+  <script src="./js/lib/html5shiv-printshiv-3.js"></script>
+  <![endif]-->
+</head>
+<body class="bgcf9f9f9">
+<!-- 头部 begin-->
+<header>
+  <div class="header">
+    <div class="cqs-main">
+      <a class="logo" href="./index.html"><img src="./images/logo_head.png" alt="logo"></a>
+      <nav class="nav">
+        <ul>
+          <li><a href="">首页</a></li>
+          <li><a href="">订单管理</a></li>
+          <li><a href="">装修队管理</a></li>
+          <li><a href="">门店管理</a></li>
+          <li><a href="">物料管理</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">您好，张三 <a class="interval_30">【未认证】</a> 消息</div>
+    </div>
+  </div>
+</header>
+<!-- 头部 end-->
+
+<!-- main begin-->
+<main class="bc w1080 mb120">
+  <div class="push-project-main cqs-box_2">
+    <h1>新建订单</h1>
+
+    <!-- 流程线 begin-->
+    <div class="flow-line-group order-flow-line pb70">
+      <div class="flow-line-group_item">
+        <div class="number">1</div>
+        <p>订单信息</p>
+      </div>
+      <div class="flow-line-group_item">
+        <div class="number">2</div>
+        <p>指定装修队</p>
+      </div>
+      <div class="flow-line-group_item">
+        <div class="number">3</div>
+        <p>配发物料</p>
+      </div>
+      <div class="flow-line-group_item">
+        <div class="number">4</div>
+        <p>新建成功</p>
+      </div>
+      <div class="line"></div>
+      <div class="line_step3"></div>
+    </div>
+    <!-- 流程线 end-->
+
+  </div>
+
+  <!-- 订单操作 begin-->
+  <section class="bind-phone-main_con none-border mt20 cqs-box_2 order-new-success">
+    <div class="two-row-container allotment-main pl40 pr50">
+      <div class="left">
+        <table class="layui-table no-border-table">
+          <tbody>
+          <tr>
+            <td>
+              <form class="layui-form" action="" lay-filter="example">
+                <div class="layui-form-item">
+                  <div class="layui-input-inline mr10">
+                    <select name="interest" lay-filter="aihao">
+                      <option value=""></option>
+                      <option value="0">写作</option>
+                      <option value="1">阅读</option>
+                      <option value="2">游戏</option>
+                      <option value="3">音乐</option>
+                      <option value="4">旅行</option>
+                    </select>
+                  </div>
+                  X
+                  <span class="number">数量</span>
+                  <a href="">选择物料商</a>
+                  <img src="./images/btn_add_n.png" alt="">
+                </div>
+
+                <div class="layui-form-item">
+                  <div class="layui-input-inline mr10">
+                    <select name="interest" lay-filter="aihao">
+                      <option value=""></option>
+                      <option value="0">写作</option>
+                      <option value="1">阅读</option>
+                      <option value="2">游戏</option>
+                      <option value="3">音乐</option>
+                      <option value="4">旅行</option>
+                    </select>
+                  </div>
+                  X
+                  <input class="number" type="tel" value="2">
+                  <a href="">选择物料商</a>
+                  <img src="./images/btn_add_h.png" alt="">
+                </div>
+              </form>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="right">
+        <form class="layui-form" action="">
+          <div class="layui-form-item">
+            <label class="layui-form-label">配 发 地 址</label>
+            <div class="layui-input-block">
+              <input type="text" value="" name="title" required lay-verify="required" placeholder="请输入配发地址"
+                     autocomplete="off" class="layui-input input-style">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">收 件 人</label>
+            <div class="layui-input-block">
+              <input type="text" value="" name="title" required lay-verify="required" placeholder="请输入收件人姓名"
+                     autocomplete="off" class="layui-input input-style">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">联 系 方 式</label>
+            <div class="layui-input-block">
+              <input type="text" name="title" value="" required lay-verify="required" placeholder="请输入联系方式"
+                     autocomplete="off" class="layui-input input-style">
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">最 晚 到 货</label>
+            <div class="layui-input-block">
+              <input type="text" name="title" value="" required lay-verify="required" placeholder="请输入最晚到货日期"
+                     autocomplete="off" class="layui-input input-style">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="btn-group_left"><button class="btn">确认配发物料并新建订单</button><button class="back-up">返回上一步</button> </div>
+  </section>
+  <!-- 订单操作 end-->
+</main>
+<!-- main end-->
+
+<!-- footer begin-->
+<footer>
+  <section class="cqs-main">
+    <ul class="footer-main">
+      <li><a href="./index.html"><img src="./images/logo_footer.png" alt=""></a></li>
+      <li>
+        <ul>
+          <li><a href="">关于我们</a></li>
+          <li><a href="">品牌故事</a></li>
+          <li><a href="">联系我们</a></li>
+          <li><a href="">常见问题</a></li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li><a href="">我们的服务</a></li>
+          <li><a href="">基础服务</a></li>
+          <li><a href="">专业施工</a></li>
+          <li><a href="">装修保障</a></li>
+          <li><a href="">第三方监理</a></li>
+        </ul>
+      </li>
+      <li>
+        <img src="./images/icon_dsfjl.png" alt="">
+        <p>【关注公众号】</p>
+      </li>
+    </ul>
+
+    <p class="copy">Copyright © 2017 All Rights Reserved 上海蜜蜂信息科技有限公司 备案号：沪ICP备16031883号</p>
+  </section>
+</footer>
+<!-- footer end-->
+
+<script src="./js/lib/layui/layui.js"></script>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/layui/data.js"></script>
+<script src="js/lib/layui/province.js"></script>
+
+<script>
+  var defaults = {
+    s1: 'provid',
+    s2: 'cityid',
+    s3: 'areaid',
+    v1: null,
+    v2: null,
+    v3: null
+  };
+</script>
+</body>
+</html>

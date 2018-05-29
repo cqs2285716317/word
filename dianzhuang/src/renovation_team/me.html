@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>我的</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="css/mui.min.css">-->
+  <link rel="stylesheet" href="../css/weui.min.css">
+  <link rel="stylesheet" href="../css/jquery-weui.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+  <script src="../js/load.js"></script>
+</head>
+<body class="bgcF4F4F4">
+  <section class="main mgb98 renovation-main">
+    <div class="me-head-box">
+      <a class="head-box_left" href="#"><img src="../renovation/tar_jiehuo_h.png" alt="头像"></a>
+      <div class="head-box_right"> <button disabled="disabled">已认证</button></div>
+      <div class="head-box_con">
+        <p>张三</p>
+        <p>组织：工长</p>
+      </div>
+    </div>
+
+    <!-- main begin-->
+    <div class="weui-media-box weui-media-box_small-appmsg">
+      <div class="weui-cells">
+        <a class="weui-cell weui-cell_access" href="./service.html">
+          <div class="weui-cell__bd weui-cell_primary">
+            <p class="cl2d2c33">服务行业&地区</p>
+          </div>
+          <span class="weui-cell__ft cl979797"></span>
+        </a>
+        <a class="weui-cell weui-cell_access" href="./complete-photo.html">
+          <div class="weui-cell__bd weui-cell_primary">
+            <p class="cl2d2c33">完工照片</p>
+          </div>
+          <span class="weui-cell__ft cl979797"></span>
+        </a>
+        <a class="weui-cell weui-cell_access" href="./account-data.html">
+          <div class="weui-cell__bd weui-cell_primary">
+            <p class="cl2d2c33">账户资料</p>
+          </div>
+          <span class="weui-cell__ft cl979797"></span>
+        </a>
+        <a class="weui-cell weui-cell_access" href="identity.html">
+          <div class="weui-cell__bd weui-cell_primary">
+            <p class="cl2d2c33">身份认证</p>
+          </div>
+          <span class="weui-cell__ft cl979797"></span>
+        </a>
+        <a class="weui-cell weui-cell_access" href="msg.html">
+          <div class="weui-cell__bd weui-cell_primary">
+            <p class="cl2d2c33">我的消息<span class="weui-badge" style="margin-left: .24rem;">8</span></p>
+          </div>
+          <span class="weui-cell__ft cl979797"></span>
+        </a>
+        <a class="weui-cell weui-cell_access" href="me-comment.html">
+          <div class="weui-cell__bd weui-cell_primary">
+            <p class="cl2d2c33">我的评价</p>
+          </div>
+          <span class="weui-cell__ft cl979797"></span>
+        </a>
+        <a class="weui-cell weui-cell_access" href="../bind-nwe-phone.html">
+          <div class="weui-cell__bd weui-cell_primary">
+            <p class="cl2d2c33">绑定手机</p>
+          </div>
+          <span class="weui-cell__ft cl979797"></span>
+        </a>
+      </div>
+    </div>
+    <!-- main end-->
+
+    <!-- footer begin-->
+    <div class="weui-tabbar">
+      <a href="get-work.html" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon">
+          <img class="icon" src="../renovation/tar_jiehuo_n.png" alt="接活">
+          <img class="on-icon" src="../renovation/tar_jiehuo_h.png" alt="接活">
+        </div>
+        <p class="weui-tabbar__label">接活</p>
+      </a>
+      <a href="workbench.html" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon">
+          <img class="icon" src="../images/tar_project_n.png" alt="工作台">
+          <img class="on-icon" src="../images/tar_project_h.png" alt="工作台">
+        </div>
+        <p class="weui-tabbar__label">工作台</p>
+      </a>
+      <a href="me.html" class="weui-tabbar__item">
+        <div class="weui-tabbar__icon">
+          <img class="on-icon" src="../images/tar_user_h.png" alt="我的">
+          <img class="icon" src="../images/tar_user_n.png" alt="我的">
+        </div>
+        <p class="weui-tabbar__label">我的</p>
+      </a>
+    </div>
+    <!-- footer end-->
+  </section>
+
+  <script src="../js/util.js"></script>
+  <script src="../js/lib/jquery.validate.js"></script>
+  <script src="../js/rgLg.js"></script>
+
+<script>
+  ;(function ($) {
+   var tabbar_item = $('.weui-tabbar__item')
+     , pathname = location.pathname;
+
+    tabbar_item.each(function () {
+      var href = $(this).attr('href');
+
+      if (href == pathname) {
+        $(this).addClass('weui-bar__item--on');
+      }
+    });
+  })(jQuery);
+</script>
+</body>
+</html>

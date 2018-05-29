@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>编辑服务行业</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="css/mui.min.css">-->
+  <link rel="stylesheet" href="../css/weui.min.css">
+  <link rel="stylesheet" href="../css/jquery-weui.css">
+  <!--<link rel="stylesheet" href="../css/custom.css">-->
+  <link rel="stylesheet" href="../css/line.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/renovation.css">
+
+
+  <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+  <script src="../js/load.js"></script>
+</head>
+<body>
+  <section class="main industry-main">
+    <div class="photo-section">
+      <p class="photo-title">服务行业</p>
+      
+      <div class="check-box">
+        <div class="check-con_item">
+          <input type="checkbox" name="iCheck" checked>
+          <label>全部</label>
+
+          <input type="checkbox" name="iCheck">
+          <label>门头</label>
+
+          <input type="checkbox" name="iCheck">
+          <label>门柱</label>
+
+          <input type="checkbox" name="iCheck" >
+          <label>墙面</label>
+
+          <input type="checkbox" name="iCheck" >
+          <label>顶棚</label>
+
+          <input type="checkbox" name="iCheck" >
+          <label>地面</label>
+
+          <input type="checkbox" name="iCheck" >
+          <label>其他</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="industry-btn-group">
+      <button>取消</button>
+      <button>保存</button>
+    </div>
+  </section>
+
+
+  <script src="../js/lib/icheck.min.js"></script>
+  <script src="../js/util.js"></script>
+  <script src="../js/lib/jquery.validate.js"></script>
+  <script src="../js/rgLg.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('input').each(function(){
+        var self = $(this),
+          label = self.next(),
+          label_text = label.text();
+
+        label.remove();
+        self.iCheck({
+          checkboxClass: 'icheckbox_line',
+          insert: '<div class="icheck_line-icon"></div>' + label_text
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>

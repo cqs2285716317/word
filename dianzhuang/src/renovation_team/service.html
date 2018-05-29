@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>服务行业&地区</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="css/mui.min.css">-->
+  <link rel="stylesheet" href="../css/weui.min.css">
+  <link rel="stylesheet" href="../css/jquery-weui.css">
+  <!--<link rel="stylesheet" href="../css/custom.css">-->
+  <link rel="stylesheet" href="../css/line.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/renovation.css">
+
+  <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+  <script src="../js/load.js"></script>
+</head>
+<body>
+  <section class="main complete-photo-main">
+    <!-- 服务行业begin-->
+    <div class="photo-section">
+      <p class="photo-title">服务行业 <a class="cqs-edit" href="industry-edit.html"><img src="../renovation/icon_edit_yellow.png" alt="">编辑</a></p>
+
+      <!-- 空白begin-->
+      <div class="none-data none">
+        <img src="../renovation/pic_empty.png" alt="图标">
+        <p>您还未选择服务行业</p>
+        <p>前往编辑让品牌方更多的了解你！</p>
+      </div>
+      <!-- 空白end-->
+
+      <!-- 复选框begin-->
+      <div class="check-box">
+        <div class="check-con_item">
+          <input type="checkbox" name="iCheck" checked>
+          <label>全部</label>
+
+          <input type="checkbox" name="iCheck">
+          <label>门头</label>
+
+          <input type="checkbox" name="iCheck">
+          <label>门柱</label>
+
+          <input type="checkbox" disabled name="iCheck" >
+          <label>墙面</label>
+
+          <input type="checkbox" name="iCheck" >
+          <label>顶棚</label>
+
+          <input type="checkbox" name="iCheck" >
+          <label>地面</label>
+
+          <input type="checkbox" name="iCheck" >
+          <label>其他</label>
+        </div>
+      </div>
+      <!-- 复选框 end-->
+    </div>
+    <!-- 服务行业end-->
+
+    <!-- 服务地区 begin-->
+    <div class="photo-section bdt15">
+      <p class="photo-title">服务地区<a class="cqs-edit" href="address-edit.html"><img src="../renovation/icon_edit_yellow.png" alt="">编辑</a></p>
+      <ul class="address-group">
+        <li class="title">
+          <div class="address-province">省/市</div>
+          <div class="address-city">市</div>
+          <div class="address-district">区</div>
+        </li>
+        <li>
+          <div class="address-province">上海</div>
+          <div class="address-city">全市</div>
+          <div class="address-district">全区</div>
+        </li>
+        <li>
+          <div class="address-province">浙江</div>
+          <div class="address-city">杭州</div>
+          <div class="address-district">全区</div>
+        </li>
+        <li>
+          <div class="address-province">江苏</div>
+          <div class="address-city">南京</div>
+          <div class="address-district">玄武区、秦淮区、仙林区</div>
+        </li>
+      </ul>
+    </div>
+    <!-- 服务地区 end-->
+  </section>
+
+  <script src="../js/lib/icheck.min.js"></script>
+  <script src="../js/util.js"></script>
+  <script src="../js/lib/jquery.validate.js"></script>
+  <script src="../js/rgLg.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('input').each(function(){
+        var self = $(this),
+          label = self.next(),
+          label_text = label.text();
+
+        label.remove();
+        self.iCheck({
+          checkboxClass: 'icheckbox_line',
+          insert: '<div class="icheck_line-icon"></div>' + label_text
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>

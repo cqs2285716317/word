@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>门店管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./js/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/join.css">
+  <link rel="stylesheet" href="./css/decoration.css">
+
+  <!--[if lt IE 9]>
+  <script src="./js/lib/html5shiv-printshiv-3.js"></script>
+  <![endif]-->
+</head>
+<body class="bgcf9f9f9">
+<!-- 头部 begin-->
+<header>
+  <div class="header">
+    <div class="cqs-main">
+      <a class="logo" href="./index.html"><img src="./images/logo_head.png" alt="logo"></a>
+      <nav class="nav">
+        <ul>
+          <li><a href="">首页</a></li>
+          <li><a href="">订单管理</a></li>
+          <li><a href="">装修队管理</a></li>
+          <li><a href="">门店管理</a></li>
+          <li><a href="">物料管理</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right"><a class="interval">您好，张三【未认证】</a> <a href="">消息</a></div>
+    </div>
+  </div>
+</header>
+<!-- 头部 end-->
+
+<!-- main begin-->
+<main class="cqs-main">
+
+  <section class="bind-phone-main clearfix">
+    <!-- left begin-->
+    <div class="bind-phone-main_left">
+      <ul class="menu">
+        <li><a href="">订单管理</a></li>
+        <li><a href="">装修队管理</a></li>
+        <li class="active"><a href="">门店管理</a></li>
+        <li class="fold fold-open">
+          <a href="javascript:;" class="js-fold">物料管理</a>
+          <ul>
+            <li><a href="javascript:;">我的物料</a></li>
+            <li><a href="javascript:;">我的供应商</a></li>
+          </ul>
+        </li>
+
+        <li class="fold fold-open">
+          <a href="javascript:;" class="js-fold">消息提醒</a>
+          <ul>
+            <li><a href="javascript:;">招标反馈</a></li>
+            <li><a href="javascript:;">平台消息</a></li>
+          </ul>
+        </li>
+
+        <li class="fold fold-open">
+          <a href="javascript:;" class="js-fold">个人中心</a>
+          <ul>
+            <li><a href="javascript:;">基本资料</a></li>
+            <li><a href="javascript:;">企业认证</a></li>
+            <li><a href="" class="active">账号设置</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+    <!-- left end-->
+
+    <!-- right begin-->
+    <div class="bind-phone-main_right bgcf9f9f9 clear-box">
+      <!-- 搜索框-城市插件 begin -->
+      <div class="pl30 pt25 bgcffffff pb20 cqs-box">
+        <!-- 搜索 begin-->
+        <div class="search-group">
+          <input type="text" placeholder="请输入关键词搜索">
+          <button class="layui-btn layui-btn-warm"><img src="./images/icon_search.png" alt=""></button>
+          <button class="layui-btn btn_fdc316 add-btn">新增物料</button>
+        </div>
+        <!-- 搜索 end-->
+
+        <!-- 城市插件 begin-->
+        <form class="layui-form search-city-group" action="">
+          <div class="layui-form-item">
+            <label class="layui-form-label">选择城市</label>
+            <div class="layui-input-block">
+              <div class="layui-input-inline">
+                <select name="provid" id="provid" lay-filter="provid">
+                  <option value="">请选择省</option>
+                </select>
+              </div>
+              <div class="layui-input-inline">
+                <select name="cityid" id="cityid" lay-filter="cityid">
+                  <option value="">请选择市</option>
+                </select>
+              </div>
+              <div class="layui-input-inline">
+                <select name="areaid" id="areaid" lay-filter="areaid">
+                  <option value="">请选择县/区</option>
+                </select>
+              </div>
+
+              <div class="fr mr30">
+                <button class="layui-btn layui-btn-primary w100">重置</button>
+                <button class="layui-btn layui-btn-warm w100">确定</button></div>
+            </div>
+          </div>
+        </form>
+        <!-- 城市插件 end-->
+      </div>
+      <!-- 搜索框-城市插件 end -->
+
+      <!-- 表格操作 begin-->
+      <div class="mt20 bgcffffff operation-table cqs-box">
+        <form class="layui-form">
+          <div class="layui-input-inline">
+            <div class="layui-inline">
+              <select name="city" lay-verify="">
+                <option value="">请选择一个城市</option>
+                <option selected value="3个月内装修">3个月内装修</option>
+                <option value="上海">上海</option>
+                <option value="杭州">杭州</option>
+              </select>
+            </div>
+            <div class="layui-inline">
+              <select name="city" lay-verify="">
+                <option value="">请选择一个城市</option>
+                <option value="全部行业" selected>全部行业</option>
+                <option value="上海">上海</option>
+                <option value="杭州">杭州</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="operation-table-btn">
+            <a class="layui-btn layui-btn-primary outline-btn">新建门店</a>
+            <button class="layui-btn layui-btn-primary w100">导出</button>
+          </div>
+        </form>
+      </div>
+      <!-- 表格操作 end-->
+
+      <section class="bgcffffff clearfix mt20 cqs-box">
+        <!-- 表格 begin-->
+        <table class="layui-table shop-manage-table" lay-skin="line">
+          <colgroup>
+            <col width="140">
+            <col width="180">
+            <col width="80">
+            <col width="80">
+            <col width="80">
+            <col width="130">
+            <col width="130">
+            <col>
+          </colgroup>
+          <thead>
+          <tr>
+            <th class="tl pl30">门店名</th>
+            <th class="tl">门店地址</th>
+            <th>面积(㎡)</th>
+            <th>行业</th>
+            <th>加盟商</th>
+            <th>加盟商手机号</th>
+            <th>上次装修时间</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="tl pl30">徐汇11号店</td>
+            <td class="tl">上海市徐汇区宜山路810号</td>
+            <td>120</td>
+            <td>电动车</td>
+            <td>张三</td>
+            <td>18711622719</td>
+            <td>2018.01.01</td>
+            <td class="operation"><a class="mr10" href="">编辑</a> | <a href="" class="ml10">删除</a></td>
+          </tr>
+          <tr>
+            <td class="tl pl30">徐汇11号店</td>
+            <td class="tl">上海市徐汇区宜山路810号</td>
+            <td>120</td>
+            <td>电动车</td>
+            <td>张三</td>
+            <td>18711622719</td>
+            <td>2018.01.01</td>
+            <td class="operation"><a class="mr10" href="">编辑</a> | <a href="" class="ml10">删除</a></td>
+          </tr>
+          <tr>
+            <td class="tl pl30">徐汇11号店</td>
+            <td class="tl">上海市徐汇区宜山路810号</td>
+            <td>120</td>
+            <td>电动车</td>
+            <td>张三</td>
+            <td>18711622719</td>
+            <td>2018.01.01</td>
+            <td class="operation"><a class="mr10" href="">编辑</a> | <a href="" class="ml10">删除</a></td>
+          </tr>
+          <tr>
+            <td class="tl pl30">徐汇11号店</td>
+            <td class="tl">上海市徐汇区宜山路810号</td>
+            <td>120</td>
+            <td>电动车</td>
+            <td>张三</td>
+            <td>18711622719</td>
+            <td>2018.01.01</td>
+            <td class="operation"><a class="mr10" href="">编辑</a> | <a href="" class="ml10">删除</a></td>
+          </tr>
+          <tr>
+            <td class="tl pl30">徐汇11号店</td>
+            <td class="tl">上海市徐汇区宜山路810号</td>
+            <td>120</td>
+            <td>电动车</td>
+            <td>张三</td>
+            <td>18711622719</td>
+            <td>2018.01.01</td>
+            <td class="operation"><a class="mr10" href="">编辑</a> | <a href="" class="ml10">删除</a></td>
+          </tr>
+          <tr>
+            <td class="tl pl30">徐汇11号店</td>
+            <td class="tl">上海市徐汇区宜山路810号</td>
+            <td>120</td>
+            <td>电动车</td>
+            <td>张三</td>
+            <td>18711622719</td>
+            <td>2018.01.01</td>
+            <td class="operation"><a class="mr10" href="">编辑</a> | <a href="" class="ml10">删除</a></td>
+          </tr>
+          </tbody>
+        </table>
+        <!-- 表格 end-->
+
+        <!--分页 begin-->
+        <div id="demo3" class="mt30 mb30 mr30 fr"></div>
+        <!--分页 end-->
+      </section>
+
+    </div>
+
+    <!-- right end-->
+  </section>
+</main>
+<!-- main end-->
+
+<!-- 新建门店 begin-->
+<div class="new-shop-dialog none">
+  <div class="new-shop-dialog_con">
+    <div class="new-decoration-box_title two-row-container">
+      <div class="left">新建装修队</div>
+      <div class="right">×</div>
+    </div>
+
+    <form class="layui-form project-form" action="">
+      <div class="layui-form-item">
+        <label class="layui-form-label">门   店   名</label>
+        <div class="layui-input-block">
+          <input type="text" name="title" required  lay-verify="required" placeholder="请输入门店名称" autocomplete="off" class="layui-input input-style">
+        </div>
+      </div>
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">门 店 地 址</label>
+        <div class="layui-input-block">
+          <div class="clearfix">
+            <div class="layui-input-inline">
+              <select name="provid" id="provid" lay-filter="provid">
+                <option value="">请选择省</option>
+              </select>
+            </div>
+            <div class="layui-input-inline">
+              <select name="cityid" id="cityid" lay-filter="cityid">
+                <option value="">请选择市</option>
+              </select>
+            </div>
+            <div class="layui-input-inline" style="margin: 0;">
+              <select name="areaid" id="areaid" lay-filter="areaid">
+                <option value="">请选择县/区</option>
+              </select>
+            </div>
+          </div>
+          <input type="text" name="title" placeholder="请输入详细地址" autocomplete="off" class="layui-input mt10 input-style">
+        </div>
+      </div>
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">门 店 面 积</label>
+        <div class="layui-input-block">
+          <div class="pr">
+            <input type="text" name="title" required lay-verify="required" placeholder="请输入面积" autocomplete="off" class="layui-input input-style">
+            <div class="input-unit">㎡</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">所 属 行 业</label>
+        <div class="layui-input-block">
+          <select name="city" lay-verify="">
+            <option value="">请选择一个城市</option>
+            <option value="010">北京</option>
+            <option value="021">上海</option>
+            <option value="0571">杭州</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">加   盟   商</label>
+        <div class="layui-input-block">
+          <input type="text" name="title" required  lay-verify="required" placeholder="请输入加盟商姓名" autocomplete="off" class="layui-input input-style">
+        </div>
+      </div>
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">手   机   号</label>
+        <div class="layui-input-block">
+          <input type="text" name="title" required  lay-verify="required" placeholder="请输入加盟商手机号" autocomplete="off" class="layui-input input-style">
+        </div>
+      </div>
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">装 修 时 间</label>
+        <div class="layui-input-block">
+          <input type="text" name="title" required  lay-verify="required" placeholder="请选择上次装修时间" autocomplete="off" class="layui-input input-style">
+        </div>
+      </div>
+
+      <div class="layui-form-item">
+        <div class="layui-input-block">
+          <button class="layui-btn layui-btn-warm w100">确定</button>
+          <button class="layui-btn layui-btn-primary w100 ml30">取消</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+<!-- 新建门店 end-->
+
+<!-- footer begin-->
+<footer>
+  <section class="cqs-main">
+    <ul class="footer-main">
+      <li><a href="./index.html"><img src="./images/logo_footer.png" alt=""></a></li>
+      <li>
+        <ul>
+          <li><a href="">关于我们</a></li>
+          <li><a href="">品牌故事</a></li>
+          <li><a href="">联系我们</a></li>
+          <li><a href="">常见问题</a></li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li><a href="">我们的服务</a></li>
+          <li><a href="">基础服务</a></li>
+          <li><a href="">专业施工</a></li>
+          <li><a href="">装修保障</a></li>
+          <li><a href="">第三方监理</a></li>
+        </ul>
+      </li>
+      <li>
+        <img src="./images/icon_dsfjl.png" alt="">
+        <p>【关注公众号】</p>
+      </li>
+    </ul>
+
+    <p class="copy">Copyright © 2017 All Rights Reserved 上海蜜蜂信息科技有限公司 备案号：沪ICP备16031883号</p>
+  </section>
+</footer>
+<!-- footer end-->
+
+<script src="./js/lib/layui/layui.all.js"></script>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/layui/data.js"></script>
+<script src="js/lib/layui/province.js"></script>
+<script>
+  layui.use(['laypage', 'layer'], function () {
+    var laypage = layui.laypage
+      , layer = layui.layer;
+
+    //自定义首页、尾页、上一页、下一页文本
+    laypage.render({
+      elem: 'demo3'
+      , count: 100
+      , theme: '#FFB800'
+      , first: '首页'
+      , last: '尾页'
+      , prev: '<em>←</em>'
+      , next: '<em>→</em>'
+    });
+
+  });
+</script>
+<script>
+
+  $(function () {
+    $('.js-fold').click(function () {
+      $(this).parent().toggleClass('fold-open');
+    });
+  });
+
+  var defaults = {
+    s1: 'provid',
+    s2: 'cityid',
+    s3: 'areaid',
+    v1: null,
+    v2: null,
+    v3: null
+  };
+</script>
+</body>
+</html>

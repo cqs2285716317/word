@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./js/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/index2.css">
+
+  <!--[if lt IE 9]>
+  <script src="./js/lib/html5shiv-printshiv-3.js"></script>
+  <![endif]-->
+</head>
+<body class="bgcf9f9f9">
+<!-- 头部 begin-->
+<header>
+  <div class="header">
+    <div class="cqs-main">
+      <a class="logo" href="./index.html"><img src="./images/logo_head.png" alt="logo"></a>
+      <nav class="nav">
+        <ul>
+          <li><a href="">首页</a></li>
+          <li><a href="">订单管理</a></li>
+          <li><a href="">装修队管理</a></li>
+          <li><a href="">门店管理</a></li>
+          <li><a href="">物料管理</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">您好，张三 <a class="interval_30">【未认证】</a> 消息</div>
+    </div>
+  </div>
+</header>
+<!-- 头部 end-->
+
+<!-- main begin-->
+<main class="cqs-main two-row-container index2-main clearfix">
+  <section class="left">
+    <!-- 用户信息 begin-->
+    <section class="user-info-box cqs-box">
+      <div class="user-info-box_top">
+        <div class="head-box">
+          <img class="head" src="./images/img_avatar_moren.png" alt="">
+          <p class="identification"><img src="./images/icon_renzheng.png" alt="">已认证</p>
+        </div>
+
+        <div class="user-info-box_con">
+          <p class="user-name">用户姓名：张三</p>
+          <p class="user-firm">所属公司：爱玛电动车</p>
+        </div>
+
+        <button class="new-order-btn">+ 新建订单</button>
+      </div>
+      <div>
+        <table class="layui-table bgcf9f9f9 tree-col">
+          <colgroup>
+            <col width="210">
+            <col width="210">
+            <col>
+          </colgroup>
+          <tbody>
+          <tr>
+            <td>
+              <p class="title fs28">8</p>
+              <p class="info">我的订单</p>
+            </td>
+            <td class="border">
+              <p class="title">5</p>
+              <p class="info">我的门店</p>
+            </td>
+            <td>
+              <p class="title">10</p>
+              <p class="info">我的装修队</p>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- 用户信息 end-->
+
+    <!-- 我的订单 begin-->
+    <section class="me-order-box cqs-box mt20">
+      <div class="table-head">
+        <div class="left">我的订单</div>
+        <div class="right">查看更多＞</div>
+      </div>
+      <div class="me-order-list">
+        <div class="me-order-list_item">
+          <img src="./images/icon_yizhongbiao.png" alt="">
+          <p>已中标</p>
+          <span class="layui-badge">4</span>
+        </div>
+        <div class="me-order-list_item">
+          <img src="./images/icon_fuwuzhong.png" alt="">
+          <p>服务中</p>
+          <span class="layui-badge">22</span>
+        </div>
+        <div class="me-order-list_item">
+          <img src="./images/icon_yiyanshou.png" alt="">
+          <p>已验收</p>
+        </div>
+        <div class="me-order-list_item">
+          <img src="./images/icon_yiquxiao.png" alt="">
+          <p>已取消</p>
+        </div>
+      </div>
+    </section>
+    <!-- 我的订单 end-->
+
+    <!-- 物流信息 begin-->
+    <section class="logistics-info-box cqs-box mt20">
+      <div class="table-head">
+        <div class="left">物流信息</div>
+      </div>
+
+      <div class="logistice-info-table">
+        <table class="layui-table">
+          <colgroup>
+            <col width="100">
+            <col width="200">
+            <col width="110">
+            <col width="150">
+            <col>
+          </colgroup>
+          <thead>
+          <tr>
+            <th>订单日期</th>
+            <th>门店名称</th>
+            <th class="tc">订单状态</th>
+            <th class="tc">物流状态</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2018.01.01</td>
+              <td>艾玛电动车徐汇门店</td>
+              <td class="tc">审核中</td>
+              <td class="tc">已到货</td>
+              <td><a href="">查看</a></td>
+            </tr>
+            <tr>
+              <td>2018.01.01</td>
+              <td>艾玛电动车徐汇门店</td>
+              <td class="tc">审核中</td>
+              <td class="tc">已到货</td>
+              <td><a href="">查看</a></td>
+            </tr>
+            <tr>
+              <td>2018.01.01</td>
+              <td>艾玛电动车徐汇门店</td>
+              <td class="tc">审核中</td>
+              <td class="tc">已到货</td>
+              <td><a href="">查看</a></td>
+            </tr>
+            <tr>
+              <td>2018.01.01</td>
+              <td>艾玛电动车徐汇门店</td>
+              <td class="tc">审核中</td>
+              <td class="tc">已到货</td>
+              <td><a href="">查看</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- 物流信息 end-->
+  </section>
+  <section class="right">
+    <!-- 项目信息 begin-->
+    <section class="project-info-box cqs-box">
+      <table class="layui-table tree-col">
+        <colgroup>
+          <col width="256">
+          <col>
+        </colgroup>
+        <tbody>
+        <tr>
+          <td class="effective">
+            <p class="title fs28">97%</p>
+            <p class="info">有效接单率</p>
+          </td>
+          <td class="border-left average">
+            <p class="title">1.21天</p>
+            <p class="info">平均接单时间</p>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <button><img src="./images/icon_send.png" alt="">发布装修项目</button>
+    </section>
+    <!-- 项目信息 end-->
+
+    <!-- 我的资金 begin-->
+    <section class="me-money-box cqs-box mt20">
+      <div class="table-head">
+        <div class="left">我的资金</div>
+      </div>
+
+      <div>
+        <table class="layui-table tree-col">
+          <colgroup>
+            <col width="190">
+            <col width="140">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <td>
+                <p class="title fs28">30,000元</p>
+                <p class="info">已付定金</p>
+              </td>
+              <td class="border">
+                <p class="title">5 <span class="fs18">笔</span></p>
+                <p class="info">待支付</p>
+              </td>
+              <td>
+                <p class="title">15,000元</p>
+                <p class="info">待退回金额</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- 我的资金 end-->
+
+    <!-- 信息table begin-->
+    <section class="msg-table cqs-box mt20">
+      <div class="table-head">
+        <div class="left">招标反馈提醒 <span class="system-msg">系统消息</span></div>
+        <div class="right">查看更多＞</div>
+      </div>
+
+      <div class="logistice-info-table">
+        <table class="layui-table">
+          <colgroup>
+            <col width="100">
+            <col>
+            <col class="80">
+          </colgroup>
+          <tbody>
+          <tr>
+            <td>2018.01.01</td>
+            <td>您发布的xxx项目有3个装修队投标</td>
+            <td><a href="">查看</a></td>
+          </tr>
+          <tr>
+            <td>2018.01.01</td>
+            <td>您确认合作的xxx项目装修队已入场</td>
+            <td><a href="">查看</a></td>
+          </tr>
+          <tr>
+            <td>2018.01.01</td>
+            <td>您发布的xxx项目有3个装修队投标</td>
+            <td><a href="">查看</a></td>
+          </tr>
+          <tr>
+            <td>2018.01.01</td>
+            <td>您发布的xxx项目有3个装修队投标</td>
+            <td><a href="">查看</a></td>
+          </tr>
+          <tr>
+            <td>2018.01.01</td>
+            <td>您发布的xxx项目有3个装修队投标</td>
+            <td><a href="">查看</a></td>
+          </tr>
+          <tr>
+            <td>2018.01.01</td>
+            <td>您发布的xxx项目有3个装修队投标</td>
+            <td><a href="">查看</a></td>
+          </tr>
+          <tr>
+            <td>2018.01.01</td>
+            <td>您发布的xxx项目有3个装修队投标</td>
+            <td><a href="">查看</a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- 信息table end-->
+  </section>
+</main>
+<!-- main end-->
+
+<!-- footer begin-->
+<footer>
+  <section class="cqs-main">
+    <ul class="footer-main">
+      <li><a href="./index.html"><img src="./images/logo_footer.png" alt=""></a></li>
+      <li>
+        <ul>
+          <li><a href="">关于我们</a></li>
+          <li><a href="">品牌故事</a></li>
+          <li><a href="">联系我们</a></li>
+          <li><a href="">常见问题</a></li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li><a href="">我们的服务</a></li>
+          <li><a href="">基础服务</a></li>
+          <li><a href="">专业施工</a></li>
+          <li><a href="">装修保障</a></li>
+          <li><a href="">第三方监理</a></li>
+        </ul>
+      </li>
+      <li>
+        <img src="./images/icon_dsfjl.png" alt="">
+        <p>【关注公众号】</p>
+      </li>
+    </ul>
+
+    <p class="copy">Copyright © 2017 All Rights Reserved 上海蜜蜂信息科技有限公司 备案号：沪ICP备16031883号</p>
+  </section>
+</footer>
+<!-- footer end-->
+
+<script src="./js/lib/layui/layui.js"></script>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/layui/data.js"></script>
+<script src="js/lib/layui/province.js"></script>
+
+<script>
+  var defaults = {
+    s1: 'provid',
+    s2: 'cityid',
+    s3: 'areaid',
+    v1: null,
+    v2: null,
+    v3: null
+  };
+</script>
+</body>
+</html>

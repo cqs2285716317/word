@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>我的评论</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="css/mui.min.css">-->
+  <link rel="stylesheet" href="../css/weui.min.css">
+  <link rel="stylesheet" href="../css/jquery-weui.css">
+  <!--<link rel="stylesheet" href="../css/custom.css">-->
+  <link rel="stylesheet" href="../css/line.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/renovation.css">
+
+  <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+  <script src="../js/load.js"></script>
+</head>
+<body class="bgcF4F4F4">
+  <section class="main complete-photo-main">
+
+    <!-- 评论星begin-->
+    <section class="comment-star-group">
+      <div class="comment-score">
+        <p class="score">4.8</p>
+        <p class="score-info">综合评论</p>
+      </div>
+      <div class="comment-star">
+        <p>工程质量 <span class="star-line"></span> <span class="clfdc316 fs26">3.0</span></p>
+        <p>工程效率 <span class="star-line"></span> <span class="clfdc316 fs26">4</span></p>
+        <p>服务态度 <span class="star-line"></span> <span class="clfdc316 fs26">5</span></p>
+      </div>
+    </section>
+    <!-- 评论星end-->
+
+    <div class="photo-section mgt15">
+      <div class="check-box">
+        <div class="check-con_item bgfdc316">
+          <input type="checkbox" name="iCheck" checked>
+          <label>全部(243)</label>
+
+          <input type="checkbox" name="iCheck">
+          <label>好评(12)</label>
+
+          <input type="checkbox" name="iCheck">
+          <label>中评(22)</label>
+
+          <input type="checkbox" name="iCheck" >
+          <label>差评(22)</label>
+
+          <input type="checkbox" name="iCheck" >
+          <label>图片(12)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 评论list begin-->
+    <div class="comment-list mgt1">
+    <p class="comment_name">张二狗 <span class="brand">品牌方</span> <span class="date">2017-03-22</span></p>
+    <p class="score">评价 <span class="star-line"></span></p>
+    <p class="info">该装修队认真负责，值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责，值得推荐</p>
+    <div class="photo">
+      <img src="../renovation/pic_yyzz.png" alt="">
+      <img src="../renovation/pic_yyzz.png" alt="">
+      <img src="../renovation/pic_yyzz.png" alt="">
+    </div>
+    <div class="order">订单号：365463718938 <span>爱玛电动车徐汇装修</span></div>
+  </div>
+
+    <div class="comment-list mgt1">
+      <p class="comment_name">张二狗 <span class="brand">品牌方</span> <span class="date">2017-03-22</span></p>
+      <p class="score">评价 <span class="star-line"></span></p>
+      <p class="info">该装修队认真负责，值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责，值得推荐</p>
+      <div class="photo">
+        <img src="../renovation/pic_yyzz.png" alt="">
+        <img src="../renovation/pic_yyzz.png" alt="">
+        <img src="../renovation/pic_yyzz.png" alt="">
+      </div>
+      <div class="order">订单号：365463718938 <span>爱玛电动车徐汇装修</span></div>
+    </div>
+    <!-- 评论list end-->
+  </section>
+
+  <script src="../js/lib/icheck.min.js"></script>
+  <script src="../js/util.js"></script>
+  <script src="../js/lib/jquery.validate.js"></script>
+  <script src="../js/lib/jquery.raty.min.js"></script>
+  <script src="../js/rgLg.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      /* check*/
+      $('input').each(function(){
+        var self = $(this),
+          label = self.next(),
+          label_text = label.text();
+
+        label.remove();
+        self.iCheck({
+          checkboxClass: 'icheckbox_line',
+          insert: '<div class="icheck_line-icon"></div>' + label_text
+        });
+      });
+
+      /* 评论星*/
+      $('.star-line').raty({
+        path: '../renovation',
+        readOnly: true, // 只读
+        score: 3,
+        number: 5,
+        half: true,
+        size: 25,
+        starOff: 'icon_star_grey.png',
+        starOn : 'icon_star_yellow.png',
+        starHalf: 'icon_star_half.png',
+        click: function(score, evt) {
+          console.log('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

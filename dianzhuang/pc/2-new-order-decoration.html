@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>装修队管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./js/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/join.css">
+  <link rel="stylesheet" href="./css/decoration.css">
+
+  <!--[if lt IE 9]>
+  <script src="./js/lib/html5shiv-printshiv-3.js"></script>
+  <![endif]-->
+</head>
+<body class="bgcf9f9f9">
+<!-- 头部 begin-->
+<header>
+  <div class="header">
+    <div class="cqs-main">
+      <a class="logo" href="./index.html"><img src="./images/logo_head.png" alt="logo"></a>
+      <nav class="nav">
+        <ul>
+          <li><a href="">首页</a></li>
+          <li><a href="">订单管理</a></li>
+          <li><a href="">装修队管理</a></li>
+          <li><a href="">门店管理</a></li>
+          <li><a href="">物料管理</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right"><a class="interval">您好，张三【未认证】</a> <a href="">消息</a></div>
+    </div>
+  </div>
+</header>
+<!-- 头部 end-->
+
+<!-- main begin-->
+<main class="cqs-main">
+
+  <div class="push-project-main cqs-box_2 pb70">
+    <h1>新建订单</h1>
+
+    <!-- 流程线 begin-->
+    <div class="flow-line-group order-flow-line">
+      <div class="flow-line-group_item">
+        <div class="number">1</div>
+        <p>订单信息</p>
+      </div>
+      <div class="flow-line-group_item">
+        <div class="number">2</div>
+        <p>指定装修队</p>
+      </div>
+      <div class="flow-line-group_item flow-line-group_item_default">
+        <div class="number">3</div>
+        <p>配发物料</p>
+      </div>
+      <div class="flow-line-group_item flow-line-group_item_default">
+        <div class="number">4</div>
+        <p>新建成功</p>
+      </div>
+      <div class="line"></div>
+      <div class="line_step270"></div>
+    </div>
+    <!-- 流程线 end-->
+  </div>
+
+  <!-- right begin-->
+  <div class="bind-phone-main_right bgcf9f9f9 mt20 clear-box">
+    <!-- 搜索框-城市插件 begin -->
+    <div class="pl30 pt25 bgcffffff pb20 cqs-box">
+      <!-- 搜索 begin-->
+      <div class="search-group">
+        <input type="text" placeholder="请输入关键词搜索">
+        <button class="layui-btn layui-btn-warm"><img src="./images/icon_search.png" alt=""></button>
+      </div>
+      <!-- 搜索 end-->
+
+      <!-- 城市插件 begin-->
+      <form class="layui-form search-city-group" action="">
+        <div class="layui-form-item">
+          <label class="layui-form-label">组织形式</label>
+          <div class="layui-input-block">
+            <input type="radio" name="organization" value="all" title="全部" checked>
+            <input type="radio" name="organization" value="firm" title="公司">
+            <input type="radio" name="organization" value="foreman" title="工长">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">所在城市</label>
+          <div class="layui-input-block">
+            <div class="layui-input-inline">
+              <select name="provid" id="provid" lay-filter="provid">
+                <option value="">请选择省</option>
+              </select>
+            </div>
+            <div class="layui-input-inline">
+              <select name="cityid" id="cityid" lay-filter="cityid">
+                <option value="">请选择市</option>
+              </select>
+            </div>
+            <div class="layui-input-inline">
+              <select name="areaid" id="areaid" lay-filter="areaid">
+                <option value="">请选择县/区</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">服务城市</label>
+          <div class="layui-input-block">
+            <div class="layui-input-inline">
+              <select name="serviceProvid" id="serviceProvid" lay-filter="serviceProvid">
+                <option value="">请选择省</option>
+              </select>
+            </div>
+            <div class="layui-input-inline">
+              <select name="serviceCityid" id="serviceCityid" lay-filter="serviceCityid">
+                <option value="">请选择市</option>
+              </select>
+            </div>
+            <div class="layui-input-inline">
+              <select name="serviceAreaid" id="serviceAreaid" lay-filter="serviceAreaid">
+                <option value="">请选择县/区</option>
+              </select>
+            </div>
+
+            <div class="fr mr30">
+              <button class="layui-btn layui-btn-primary w100">重置</button>
+              <button class="layui-btn layui-btn-warm w100">确定</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!-- 城市插件 end-->
+    </div>
+    <!-- 搜索框-城市插件 end -->
+
+    <!-- 表格操作 begin-->
+    <div class="mt20 bgcffffff operation-table cqs-box">
+      <form class="layui-form">
+        <div class="layui-input-inline">
+          <label class="select-label">评分</label>
+          <div class="layui-inline">
+            <select name="city" lay-verify="">
+              <option value="">请选择一个城市</option>
+              <option selected value="3个月内装修">3个月内装修</option>
+              <option value="上海">上海</option>
+              <option value="杭州">杭州</option>
+            </select>
+          </div>
+          <label class="select-label ml60">合作次数</label>
+          <div class="layui-inline">
+            <select name="city" lay-verify="">
+              <option value="">请选择一个城市</option>
+              <option value="全部行业" selected>全部行业</option>
+              <option value="上海">上海</option>
+              <option value="杭州">杭州</option>
+            </select>
+          </div>
+        </div>
+
+        <a class="new-add-material-btn">
+          <img src="./images/btn_add_n.png" alt="">新建装修队
+        </a>
+      </form>
+    </div>
+    <!-- 表格操作 end-->
+
+    <section class="clearfix">
+      <!-- 个人简介列表-->
+      <section>
+        <!-- 个人简介group begin-->
+        <div class="decoration-person-group mt20">
+          <div class="head-person"><img src="./images/img_avatar_moren.png" alt=""></div>
+
+          <div class="person-con">
+            <table class="layui-table">
+              <colgroup>
+                <col>
+                <col width="250">
+                <col width="180">
+              </colgroup>
+              <tbody>
+              <tr>
+                <td class="name-box">
+                  <h1>李小明 <span>已认证</span> <img src="./images/btn_follow.png" alt=""></h1>
+
+                  <div class="info mt35">组织 <span>工长</span></div>
+                  <div class="info">介绍 <span class="label">上海</span><span class="label">江苏</span><span class="label">浙江</span>
+                  </div>
+                </td>
+                <td class="pr">
+                  <p class="grade">评分 <span id="star"></span> 4.5</p>
+                  <p class="order">总订单：23单，双方合作3次</p>
+                  <p class="line"></p>
+                </td>
+                <td class="tc">
+                  <button class="layui-btn layui-btn-primary w100 cancel-btn">取消收藏</button>
+                  <button class="layui-btn layui-btn-warm w100 invite-btn">邀约他</button>
+                  <p class="phone"><img src="./images/icon_tel.png" alt="">13922344098</p>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="decoration-person-group mt20">
+          <div class="head-person"><img src="./images/img_avatar_moren.png" alt=""></div>
+
+          <div class="person-con">
+            <table class="layui-table">
+              <colgroup>
+                <col>
+                <col width="250">
+                <col width="180">
+              </colgroup>
+              <tbody>
+              <tr>
+                <td class="name-box">
+                  <h1>李小明 <span>已认证</span> <img src="./images/btn_follow.png" alt=""></h1>
+
+                  <div class="info mt35">组织 <span>工长</span></div>
+                  <div class="info">介绍 <span class="label">上海</span><span class="label">江苏</span><span class="label">浙江</span>
+                  </div>
+                </td>
+                <td class="pr">
+                  <p class="grade">评分 <span id="star"></span> 4.5</p>
+                  <p class="order">总订单：23单，双方合作3次</p>
+                  <p class="line"></p>
+                </td>
+                <td class="tc">
+                  <button class="layui-btn layui-btn-primary w100 cancel-btn">取消收藏</button>
+                  <button class="layui-btn layui-btn-warm w100 invite-btn">邀约他</button>
+                  <p class="phone"><img src="./images/icon_tel.png" alt="">13922344098</p>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="decoration-person-group mt20">
+          <div class="head-person"><img src="./images/img_avatar_moren.png" alt=""></div>
+
+          <div class="person-con">
+            <table class="layui-table">
+              <colgroup>
+                <col>
+                <col width="250">
+                <col width="180">
+              </colgroup>
+              <tbody>
+              <tr>
+                <td class="name-box">
+                  <h1>李小明 <span>已认证</span> <img src="./images/btn_follow.png" alt=""></h1>
+
+                  <div class="info mt35">组织 <span>工长</span></div>
+                  <div class="info">介绍 <span class="label">上海</span><span class="label">江苏</span><span class="label">浙江</span>
+                  </div>
+                </td>
+                <td class="pr">
+                  <p class="grade">评分 <span id="star"></span> 4.5</p>
+                  <p class="order">总订单：23单，双方合作3次</p>
+                  <p class="line"></p>
+                </td>
+                <td class="tc">
+                  <button class="layui-btn layui-btn-primary w100 cancel-btn">取消收藏</button>
+                  <button class="layui-btn layui-btn-warm w100 invite-btn">邀约他</button>
+                  <p class="phone"><img src="./images/icon_tel.png" alt="">13922344098</p>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="decoration-person-group mt20">
+          <div class="head-person"><img src="./images/img_avatar_moren.png" alt=""></div>
+
+          <div class="person-con">
+            <table class="layui-table">
+              <colgroup>
+                <col>
+                <col width="250">
+                <col width="180">
+              </colgroup>
+              <tbody>
+              <tr>
+                <td class="name-box">
+                  <h1>李小明 <span>已认证</span> <img src="./images/btn_follow.png" alt=""></h1>
+
+                  <div class="info mt35">组织 <span>工长</span></div>
+                  <div class="info">介绍 <span class="label">上海</span><span class="label">江苏</span><span class="label">浙江</span>
+                  </div>
+                </td>
+                <td class="pr">
+                  <p class="grade">评分 <span id="star"></span> 4.5</p>
+                  <p class="order">总订单：23单，双方合作3次</p>
+                  <p class="line"></p>
+                </td>
+                <td class="tc">
+                  <button class="layui-btn layui-btn-primary w100 cancel-btn">取消收藏</button>
+                  <button class="layui-btn layui-btn-warm w100 invite-btn">邀约他</button>
+                  <p class="phone"><img src="./images/icon_tel.png" alt="">13922344098</p>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="decoration-person-group mt20">
+          <div class="head-person"><img src="./images/img_avatar_moren.png" alt=""></div>
+
+          <div class="person-con">
+            <table class="layui-table">
+              <colgroup>
+                <col>
+                <col width="250">
+                <col width="180">
+              </colgroup>
+              <tbody>
+              <tr>
+                <td class="name-box">
+                  <h1>李小明 <span>已认证</span> <img src="./images/btn_follow.png" alt=""></h1>
+
+                  <div class="info mt35">组织 <span>工长</span></div>
+                  <div class="info">介绍 <span class="label">上海</span><span class="label">江苏</span><span class="label">浙江</span>
+                  </div>
+                </td>
+                <td class="pr">
+                  <p class="grade">评分 <span id="star"></span> 4.5</p>
+                  <p class="order">总订单：23单，双方合作3次</p>
+                  <p class="line"></p>
+                </td>
+                <td class="tc">
+                  <button class="layui-btn layui-btn-primary w100 cancel-btn">取消收藏</button>
+                  <button class="layui-btn layui-btn-warm w100 invite-btn">邀约他</button>
+                  <p class="phone"><img src="./images/icon_tel.png" alt="">13922344098</p>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="decoration-person-group mt20">
+          <div class="head-person"><img src="./images/img_avatar_moren.png" alt=""></div>
+
+          <div class="person-con">
+            <table class="layui-table">
+              <colgroup>
+                <col>
+                <col width="250">
+                <col width="180">
+              </colgroup>
+              <tbody>
+              <tr>
+                <td class="name-box">
+                  <h1>李小明 <span>已认证</span> <img src="./images/btn_follow.png" alt=""></h1>
+
+                  <div class="info mt35">组织 <span>工长</span></div>
+                  <div class="info">介绍 <span class="label">上海</span><span class="label">江苏</span><span class="label">浙江</span>
+                  </div>
+                </td>
+                <td class="pr">
+                  <p class="grade">评分 <span id="star"></span> 4.5</p>
+                  <p class="order">总订单：23单，双方合作3次</p>
+                  <p class="line"></p>
+                </td>
+                <td class="tc">
+                  <button class="layui-btn layui-btn-primary w100 cancel-btn">取消收藏</button>
+                  <button class="layui-btn layui-btn-warm w100 invite-btn">邀约他</button>
+                  <p class="phone"><img src="./images/icon_tel.png" alt="">13922344098</p>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- 个人简介group end-->
+      </section>
+      <!-- 个人简介列表-->
+
+      <!--分页 begin-->
+      <div id="demo3" class="mt30 mb30 fr"></div>
+      <!--分页 end-->
+    </section>
+
+  </div>
+  <!-- right end-->
+
+</main>
+<!-- main end-->
+
+<!-- footer begin-->
+<footer>
+  <section class="cqs-main">
+    <ul class="footer-main">
+      <li><a href="./index.html"><img src="./images/logo_footer.png" alt=""></a></li>
+      <li>
+        <ul>
+          <li><a href="">关于我们</a></li>
+          <li><a href="">品牌故事</a></li>
+          <li><a href="">联系我们</a></li>
+          <li><a href="">常见问题</a></li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li><a href="">我们的服务</a></li>
+          <li><a href="">基础服务</a></li>
+          <li><a href="">专业施工</a></li>
+          <li><a href="">装修保障</a></li>
+          <li><a href="">第三方监理</a></li>
+        </ul>
+      </li>
+      <li>
+        <img src="./images/icon_dsfjl.png" alt="">
+        <p>【关注公众号】</p>
+      </li>
+    </ul>
+
+    <p class="copy">Copyright © 2017 All Rights Reserved 上海蜜蜂信息科技有限公司 备案号：沪ICP备16031883号</p>
+  </section>
+</footer>
+<!-- footer end-->
+
+<script src="./js/lib/layui/layui.js"></script>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/jquery.raty.js"></script>
+<script src="js/lib/layui/data.js"></script>
+<script src="js/lib/layui/province.js"></script>
+<script src="js/lib/layui/province2.js"></script>
+<script>
+  layui.use(['laypage', 'layer', 'element'], function () {
+    var laypage = layui.laypage
+      , $ = layui.jquery
+      , element = layui.element
+      , layer = layui.layer;
+
+    //触发事件
+    var active = {
+      tabAdd: function () {
+        //新增一个Tab项
+        element.tabAdd('demo', {
+          title: '新选项' + (Math.random() * 1000 | 0) //用于演示
+          , content: '内容' + (Math.random() * 1000 | 0)
+          , id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
+        })
+      }
+      , tabDelete: function (othis) {
+        //删除指定Tab项
+        element.tabDelete('demo', '44'); //删除：“商品管理”
+
+
+        othis.addClass('layui-btn-disabled');
+      }
+      , tabChange: function () {
+        //切换到指定Tab项
+        element.tabChange('demo', '22'); //切换到：用户管理
+      }
+    };
+
+    $('.site-demo-active').on('click', function () {
+      var othis = $(this), type = othis.data('type');
+      active[type] ? active[type].call(this, othis) : '';
+    });
+
+    //Hash地址的定位
+    var layid = location.hash.replace(/^#test=/, '');
+    element.tabChange('test', layid);
+
+    element.on('tab(test)', function (elem) {
+      location.hash = 'test=' + $(this).attr('lay-id');
+    });
+
+    //自定义首页、尾页、上一页、下一页文本
+    laypage.render({
+      elem: 'demo3'
+      , count: 100
+      , theme: '#FFB800'
+      , first: '首页'
+      , last: '尾页'
+      , prev: '<em>←</em>'
+      , next: '<em>→</em>'
+    });
+
+  });
+</script>
+<script>
+
+  /* 左菜单折叠*/
+  $(function () {
+    $('.js-fold').click(function () {
+      $(this).parent().toggleClass('fold-open');
+    });
+  });
+
+  /* 城市插件*/
+  var defaults = {
+    s1: 'provid',
+    s2: 'cityid',
+    s3: 'areaid',
+    v1: null,
+    v2: null,
+    v3: null
+  };
+
+  var service_defaults = {
+    s1: 'serviceProvid',
+    s2: 'serviceCityid',
+    s3: 'serviceAreaid',
+    v1: null,
+    v2: null,
+    v3: null
+  };
+
+  /* 评论星*/
+  $('#star').raty({
+    path: 'images',
+    size: 24,
+    score: 4.5,
+    starHalf: 'icon_star_12_half.png',
+    starOff: 'icon_star_12_grey.png',
+    starOn: 'icon_star_12_yellow.png'
+  });
+  $('.star-score').raty({
+    path: 'images',
+    size: 24,
+    score: 4.5,
+    starHalf: 'icon_star_12_half.png',
+    starOff: 'icon_star_12_grey.png',
+    starOn: 'icon_star_12_yellow.png'
+  });
+  $('.star').raty({
+    path: 'images',
+    size: 24,
+    score: 4.5,
+    starHalf: 'icon_star_12_half.png',
+    starOff: 'icon_star_12_grey.png',
+    starOn: 'icon_star_12_yellow.png'
+  });
+  $('.star-line').raty({
+    path: 'images',
+    size: 24,
+    score: 4.5,
+    starHalf: 'icon_star_12_half.png',
+    starOff: 'icon_star_12_grey.png',
+    starOn: 'icon_star_12_yellow.png'
+  });
+
+</script>
+</body>
+</html>

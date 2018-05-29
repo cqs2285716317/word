@@ -1,0 +1,41 @@
+.protocol-main_top {
+    background:#f7f8f9;
+    height:170px;
+    padding-top: 45px;
+}
+.protocol-main_top h1 {
+    font-size:34px;
+    color:#fdc316;
+    letter-spacing:0;
+    text-align:left;
+}
+.protocol-main_top p {
+    font-size:12px;
+    color:#979797;
+    letter-spacing:0;
+    text-align:left;
+    margin-top: 5px;
+}
+
+.protocol-main_con article {
+    padding: 50px 0;
+}
+
+.protocol-main_con article h2 {
+    font-size:20px;
+    color:#4c4c4c;
+    letter-spacing:0;
+    text-align:left;
+}
+
+article ul li {
+    font-size:14px;
+    color:#4c4c4c;
+    letter-spacing:0;
+    text-align:left;
+    margin-top: 28px;
+}
+
+hr {
+    background: #dddddd;
+}

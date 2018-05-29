@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>新增照片</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="css/mui.min.css">-->
+  <link rel="stylesheet" href="../css/weui.min.css">
+  <link rel="stylesheet" href="../css/jquery-weui.css">
+  <!--<link rel="stylesheet" href="../css/custom.css">-->
+  <link rel="stylesheet" href="../css/line.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/renovation.css">
+
+  <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+  <script src="../js/load.js"></script>
+</head>
+<body>
+  <section class="main complete-photo-main">
+
+    <div class="weui-cell weui-cell_access" style="height: .94rem; padding: 0 .4rem; background-color: #fff;margin-bottom: .16rem;">
+      <div class="weui-cell__bd">
+        <p>选择区域</p>
+      </div>
+      <div class="weui-cell__ft"> <input class="weui-input" style="text-align: right;" id="job" type="text" value=""></div>
+    </div>
+
+    <div class="photo-main">
+        <div class="photo-main_item">
+            <img src="../renovation/bg_xuxiankuang.png" alt="">
+            <p>门头</p>
+            <p>2017.12.07</p>
+        </div>
+        <div class="photo-main_item up-load-box">
+          <div class="up-load-box">
+            <img class="bg" src="../renovation/bg_xuxiankuang.png" alt="">
+            <input type="file">
+            <img class="photo" src="../renovation/icon_camera.png" alt="">
+            <p>添加图片</p>
+          </div>
+
+        </div>
+    </div>
+
+    <div class="industry-btn-group">
+      <button>取消</button>
+      <button>保存</button>
+    </div>
+  </section>
+
+
+  <script src="../js/lib/icheck.min.js"></script>
+  <script src="../js/util.js"></script>
+  <script src="../js/lib/jquery.validate.js"></script>
+  <script src="../js/rgLg.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("#job").select({
+        title: "选择区域",
+        items: ["法官", "医生", "猎人", "学生", "记者", "其他"],
+        onChange: function(d) {
+          console.log(this, d);
+        },
+        onClose: function() {
+          console.log("close");
+        },
+        onOpen: function() {
+          console.log("open");
+        }
+      });
+
+    });
+  </script>
+</body>
+</html>

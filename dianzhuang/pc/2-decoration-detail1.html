@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>装修队详情</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./js/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/line.css">
+  <link rel="stylesheet" href="./css/decoration.css">
+
+  <!--[if lt IE 9]>
+  <script src="./js/lib/html5shiv-printshiv-3.js"></script>
+  <![endif]-->
+</head>
+<body class="bgcf9f9f9">
+<!-- 头部 begin-->
+<header>
+  <div class="header">
+    <div class="cqs-main">
+      <a class="logo" href="./index.html"><img src="./images/logo_head.png" alt="logo"></a>
+      <nav class="nav">
+        <ul>
+          <li><a href="">首页</a></li>
+          <li><a href="">订单管理</a></li>
+          <li><a href="">装修队管理</a></li>
+          <li><a href="">门店管理</a></li>
+          <li><a href="">物料管理</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right"><a class="interval">您好，张三【未认证】</a> <a href="">消息</a></div>
+    </div>
+  </div>
+</header>
+<!-- 头部 end-->
+
+<!-- main begin-->
+<main class="cqs-main pt20 mb60">
+
+    <!-- 面包屑 begin-->
+    <span class="layui-breadcrumb" lay-separator="＞">
+      <a href="">指定装修队</a>
+      <a href="">详情</a>
+    </span>
+    <!-- 面包屑 end-->
+
+    <!-- right begin-->
+    <div class="bind-phone-main_con mt20">
+
+      <!-- 个人简介group begin-->
+      <div class="decoration-person-group">
+        <div class="head-person"><img src="./images/img_avatar_moren.png" alt=""></div>
+
+        <div class="person-con">
+          <table class="layui-table">
+            <colgroup>
+              <col>
+              <col width="250">
+              <col width="180">
+            </colgroup>
+            <tbody>
+            <tr>
+              <td class="name-box">
+                <h1>李小明 <span>已认证</span> <img src="./images/btn_follow.png" alt=""></h1>
+                <p class="address">上海</p>
+                <div class="info mt20">组织 <span>工长</span></div>
+                <div class="info">介绍 <span>蓝翔出身一级棒！！！</span></div>
+              </td>
+              <td class="pr">
+                <p class="grade">评分 <span id="star"></span> 4.5</p>
+                <p class="order">总订单：23单，双方合作3次</p>
+                <p class="line"></p>
+              </td>
+              <td class="tc"><button class="layui-btn layui-btn-warm w100">指定他</button></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- 个人简介group end-->
+
+
+      <!-- 服务行业地区 begin-->
+      <div class="bgcffffff cqs-box">
+        <div class="layui-tab layui-tab-brief mt20" lay-filter="docDemoTabBrief">
+          <ul class="layui-tab-title">
+            <li class="layui-this">服务行业&地区</li>
+            <li>完工照片</li>
+          </ul>
+          <div class="layui-tab-content p30">
+            <div class="layui-tab-item layui-show">
+              <p class="circle-h1">服务行业</p>
+              <div class="circle-h1_con clearfix">
+                <!-- 复选框begin-->
+                <div class="check-box">
+                  <div class="check-con_item">
+                    <input type="checkbox" disabled name="iCheck">
+                    <label>服装业</label>
+
+                    <input type="checkbox" disabled name="iCheck">
+                    <label>电动车</label>
+
+                    <input type="checkbox" disabled name="iCheck">
+                    <label>餐饮业</label>
+
+                    <input type="checkbox" disabled name="iCheck" >
+                    <label>便利店</label>
+
+                  </div>
+                </div>
+                <!-- 复选框 end-->
+              </div>
+              <p class="circle-h1 mt40">服务地区</p>
+
+              <!-- 服务地区 begin-->
+              <div class="photo-section bdt15">
+                <ul class="address-group">
+                  <li class="title">
+                    <div class="address-province">省/市</div>
+                    <div class="address-city">市</div>
+                    <div class="address-district">区</div>
+                  </li>
+                  <li>
+                    <div class="address-province">上海</div>
+                    <div class="address-city">全市</div>
+                    <div class="address-district">全区</div>
+                  </li>
+                  <li>
+                    <div class="address-province">浙江</div>
+                    <div class="address-city">杭州</div>
+                    <div class="address-district">全区</div>
+                  </li>
+                  <li>
+                    <div class="address-province">江苏</div>
+                    <div class="address-city">南京</div>
+                    <div class="address-district">玄武区、秦淮区、仙林区</div>
+                  </li>
+                </ul>
+              </div>
+              <!-- 服务地区 end-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 服务行业地区 end-->
+
+      <div class="comment-group mt20">
+        <p class="title">评价</p>
+
+        <section class="pl30 pr30">
+          <div class="comment-score-group">
+            <table class="layui-table">
+              <colgroup>
+                <col width="165">
+                <col width="200">
+                <col>
+              </colgroup>
+              <tbody>
+              <tr>
+                <td class="evaluate-td">
+                  <p class="title-p">综合评价</p>
+                  <p class="score">4.8</p>
+                  <p class="star-score"></p>
+                </td>
+                <td class="star-td">
+                  <p>工程质量 <span class="star"></span></p>
+                  <p>工程效率 <span class="star"></span></p>
+                  <p>服务态度 <span class="star"></span></p>
+                </td>
+                <td class="comment-td">
+                  <p>大家都说：</p>
+                  <div class="check-box comment-check">
+                    <div class="check-con_item">
+                      <input type="checkbox" disabled checked name="iCheck">
+                      <label>全部99</label>
+
+                      <input type="checkbox" disabled name="iCheck">
+                      <label>好评99</label>
+
+                      <input type="checkbox" disabled name="iCheck">
+                      <label>中评0</label>
+
+                      <input type="checkbox" disabled name="iCheck" >
+                      <label>差评0</label>
+
+                      <input type="checkbox" disabled name="iCheck" >
+                      <label>有图40</label>
+
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 评论 list begin-->
+          <div class="comment-list">
+            <div class="comment-list_item">
+              <div class="comment-list_item-hd">
+                <p class="comment-name">张二狗</p>
+                <p class="type-label">品牌方</p>
+              </div>
+              <div class="comment-list_item-bd">
+                <p class="comemnt-score-group">评分 <span class="star-line"></span>4.5</p>
+                <p class="comment-describe">该装修队认真负责，值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责，值得推荐该装修队认
+                  真负责，值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责，值得推荐</p>
+                <div class="comment-img-group">
+                  <img src="./images/bg_shenfen_n.png" alt="">
+                  <img src="./images/bg_shenfen_n.png" alt="">
+                  <img src="./images/bg_shenfen_n.png" alt="">
+                </div>
+                <p class="comment-date">2017-03-22     23：00</p>
+              </div>
+            </div>
+            <div class="comment-list_item">
+              <div class="comment-list_item-hd">
+                <p class="comment-name">张二狗</p>
+                <p class="type-label">品牌方</p>
+              </div>
+              <div class="comment-list_item-bd">
+                <p class="comemnt-score-group">评分 <span class="star-line"></span>4.5</p>
+                <p class="comment-describe">该装修队认真负责，值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责，值得推荐该装修队认
+                  真负责，值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责，值得推荐</p>
+                <div class="comment-img-group">
+                  <img src="./images/bg_shenfen_n.png" alt="">
+                  <img src="./images/bg_shenfen_n.png" alt="">
+                  <img src="./images/bg_shenfen_n.png" alt="">
+                </div>
+                <p class="comment-date">2017-03-22     23：00</p>
+              </div>
+            </div>
+            <div class="comment-list_item">
+              <div class="comment-list_item-hd">
+                <p class="comment-name">张二狗</p>
+                <p class="type-label">品牌方</p>
+              </div>
+              <div class="comment-list_item-bd">
+                <p class="comemnt-score-group">评分 <span class="star-line"></span>4.5</p>
+                <p class="comment-describe">该装修队认真负责，值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责，值得推荐该装修队认
+                  真负责，值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责值得推荐该装修队认真负责，值得推荐</p>
+                <div class="comment-img-group">
+                  <img src="./images/bg_shenfen_n.png" alt="">
+                  <img src="./images/bg_shenfen_n.png" alt="">
+                  <img src="./images/bg_shenfen_n.png" alt="">
+                </div>
+                <p class="comment-date">2017-03-22     23：00</p>
+              </div>
+            </div>
+          </div>
+          <!-- 评论 list end-->
+
+          <!--分页 begin-->
+          <div id="demo3" class="mt20 fr mb20"></div>
+          <!--分页 end-->
+        </section>
+
+      </div>
+    </div>
+    <!-- right end-->
+</main>
+<!-- main end-->
+
+<!-- footer begin-->
+<footer>
+  <section class="cqs-main">
+    <ul class="footer-main">
+      <li><a href="./index.html"><img src="./images/logo_footer.png" alt=""></a></li>
+      <li>
+        <ul>
+          <li><a href="">关于我们</a></li>
+          <li><a href="">品牌故事</a></li>
+          <li><a href="">联系我们</a></li>
+          <li><a href="">常见问题</a></li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li><a href="">我们的服务</a></li>
+          <li><a href="">基础服务</a></li>
+          <li><a href="">专业施工</a></li>
+          <li><a href="">装修保障</a></li>
+          <li><a href="">第三方监理</a></li>
+        </ul>
+      </li>
+      <li>
+        <img src="./images/icon_dsfjl.png" alt="">
+        <p>【关注公众号】</p>
+      </li>
+    </ul>
+
+    <p class="copy">Copyright © 2017 All Rights Reserved 上海蜜蜂信息科技有限公司 备案号：沪ICP备16031883号</p>
+  </section>
+</footer>
+<!-- footer end-->
+
+<script src="./js/lib/layui/layui.js"></script>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/jquery.raty.js"></script>
+<script src="./js/lib/icheck.min.js"></script>
+<script>
+  layui.use(['laypage', 'layer', 'element'], function () {
+    var laypage = layui.laypage
+      , $ = layui.jquery
+      , element = layui.element
+      , layer = layui.layer;
+
+    //触发事件
+    var active = {
+      tabAdd: function(){
+        //新增一个Tab项
+        element.tabAdd('demo', {
+          title: '新选项'+ (Math.random()*1000|0) //用于演示
+          ,content: '内容'+ (Math.random()*1000|0)
+          ,id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
+        })
+      }
+      ,tabDelete: function(othis){
+        //删除指定Tab项
+        element.tabDelete('demo', '44'); //删除：“商品管理”
+
+
+        othis.addClass('layui-btn-disabled');
+      }
+      ,tabChange: function(){
+        //切换到指定Tab项
+        element.tabChange('demo', '22'); //切换到：用户管理
+      }
+    };
+
+    $('.site-demo-active').on('click', function(){
+      var othis = $(this), type = othis.data('type');
+      active[type] ? active[type].call(this, othis) : '';
+    });
+
+    //Hash地址的定位
+    var layid = location.hash.replace(/^#test=/, '');
+    element.tabChange('test', layid);
+
+    element.on('tab(test)', function(elem){
+      location.hash = 'test='+ $(this).attr('lay-id');
+    });
+
+    //自定义首页、尾页、上一页、下一页文本
+    laypage.render({
+      elem: 'demo3'
+      , count: 100
+      , theme: '#FFB800'
+      , first: '首页'
+      , last: '尾页'
+      , prev: '<em>←</em>'
+      , next: '<em>→</em>'
+    });
+
+  });
+</script>
+<script>
+
+  /* 左菜单折叠*/
+  $(function () {
+    $('.js-fold').click(function () {
+      $(this).parent().toggleClass('fold-open');
+    });
+  });
+
+  /* 评论星*/
+  $('#star').raty({
+    path: 'images',
+    size: 24,
+    score: 4.5,
+    starHalf: 'icon_star_12_half.png',
+    starOff: 'icon_star_12_grey.png',
+    starOn: 'icon_star_12_yellow.png'
+  });
+  $('.star-score').raty({
+    path: 'images',
+    size: 24,
+    score: 4.5,
+    starHalf: 'icon_star_12_half.png',
+    starOff: 'icon_star_12_grey.png',
+    starOn: 'icon_star_12_yellow.png'
+  });
+  $('.star').raty({
+    path: 'images',
+    size: 24,
+    score: 4.5,
+    starHalf: 'icon_star_12_half.png',
+    starOff: 'icon_star_12_grey.png',
+    starOn: 'icon_star_12_yellow.png'
+  });
+  $('.star-line').raty({
+    path: 'images',
+    size: 24,
+    score: 4.5,
+    starHalf: 'icon_star_12_half.png',
+    starOff: 'icon_star_12_grey.png',
+    starOn: 'icon_star_12_yellow.png'
+  });
+
+  /* 复选框*/
+  $(document).ready(function(){
+    $('input').each(function(){
+      var self = $(this),
+        label = self.next(),
+        label_text = label.text();
+
+      label.remove();
+      self.iCheck({
+        checkboxClass: 'icheckbox_line',
+        insert: '<div class="icheck_line-icon"></div>' + label_text
+      });
+    });
+
+  });
+
+</script>
+</body>
+</html>
